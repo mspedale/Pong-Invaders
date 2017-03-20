@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ballScript : MonoBehaviour {
 	
-	double minSpeedY = 0.2;
-	double maxSpeedY = 5;
-	double velX = 0;
-	double velY = 0;
+	float minSpeedY = 0.5f;
+	float maxSpeedY = 5f;
+	float velX = 0f;
+	float velY = 0f;
+	//double velocity = new Vector3(velX,velY,0);
 	
 	
 	void Start () {
@@ -17,5 +18,7 @@ public class ballScript : MonoBehaviour {
 	
 	void Update () {
 		// Movement update
+		// velocity =(velX,velY,0);
+		transform.position = new Vector3(0,velY,0);
 	}
 }
