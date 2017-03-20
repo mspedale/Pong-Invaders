@@ -11,7 +11,7 @@ var ballRigidBody : Rigidbody2D;
 
 function Start () {
 	ballRigidBody = GetComponent.<Rigidbody2D>();
-    ballRigidBody.AddForce(Vector2(600, -600));
+//  ballRigidBody.AddForce(Vector2(600, -600));
 //	direction = -1f;
 //	velY = startSpeedY * direction;
 }
