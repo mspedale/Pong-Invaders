@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 
-public class clonerScript : MonoBehaviour {
+public class gunScript : MonoBehaviour {
 
 public GameObject playerProjectile;
 GameObject playerProjectileClone;

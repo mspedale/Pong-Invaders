@@ -48,8 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Ball\ballScript.cs" />
      <Compile Include="Assets\Scripts\Ball\containmentScript.cs" />
-     <Compile Include="Assets\Scripts\Player\clonerScript.cs" />
-     <Compile Include="Assets\Scripts\Player\clonerScript2.cs" />
+     <Compile Include="Assets\Scripts\Player\gunScript.cs" />
+     <Compile Include="Assets\Scripts\Player\gunScript2.cs" />
      <Compile Include="Assets\Scripts\Player\playerControl.cs" />
      <Compile Include="Assets\Scripts\Player\playerControl2.cs" />
  <Reference Include="UnityEngine.UI">
