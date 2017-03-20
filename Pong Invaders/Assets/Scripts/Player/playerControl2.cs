@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerControl : MonoBehaviour {
+public class playerControl2 : MonoBehaviour {
 	
 	float m_speed = 13;
 	GameObject playerProjectileClone;
@@ -16,7 +16,7 @@ public class playerControl : MonoBehaviour {
 	void FixedUpdate () {		
 		
 		// movement
-        var move = new Vector3(Input.GetAxis("Horizontal"), 0,0);
+        var move = new Vector3(Input.GetAxis("Horizontal2"), 0,0);
         transform.position += move * m_speed * Time.deltaTime;
 				
 	}
