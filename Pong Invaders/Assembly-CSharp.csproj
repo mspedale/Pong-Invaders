@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Ball\ballScript.cs" />
+     <Compile Include="Assets\Scripts\Ball\containmentScript.cs" />
      <Compile Include="Assets\Scripts\Player\clonerScript.cs" />
      <Compile Include="Assets\Scripts\Player\playerControl.cs" />
  <Reference Include="UnityEngine.UI">

@@ -1,6 +1,7 @@
 #pragma strict
 
 var speed = 0.3;
+var direction = 1;
 var posX;
 var posY;
 
@@ -10,7 +11,7 @@ function Start () {
 
 function Update () {
 	// Position = position + speed
-	gameObject.transform.position.y += speed;
+	gameObject.transform.position.y += speed * direction;
 	
 	/*
 	// shorthand variables for position

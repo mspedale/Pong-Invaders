@@ -3,14 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ballScript : MonoBehaviour {
-
-	// Use this for initialization
+	
+	double minSpeedY = 0.2;
+	double maxSpeedY = 5;
+	double velX = 0;
+	double velY = 0;
+	
+	
 	void Start () {
-		
+		velY = -minSpeedY;
 	}
 	
-	// Update is called once per frame
+	
 	void Update () {
-		
+		// Movement update
 	}
 }
