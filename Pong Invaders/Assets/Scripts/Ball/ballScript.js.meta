@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 0e5a7d497ebb4e345a787f3053f64252
-timeCreated: 1489979706
+timeCreated: 1490066063
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ballRigidBody: {instanceID: 0}
+  - ballcolsound: {fileID: 8300000, guid: be51a7a7a6df53244b3c30579bd4913d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

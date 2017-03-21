@@ -4,7 +4,8 @@ using UnityEngine;
 
 
 
-public class containmentScript : MonoBehaviour {
+public class containmentScript : MonoBehaviour
+{
 
 	int hp = 10;
 	float ballForce = 200f;
@@ -12,37 +13,49 @@ public class containmentScript : MonoBehaviour {
 	Rigidbody2D ballBody;
 	
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
 		
 	}
 	
-	// Collision event (hopefully just with player projectiles)
-	void OnTriggerEnter2D(Collider2D other) {
-		hp -= 1;
-		print(hp);
+	void OnTriggerEnter2D(Collider2D other)
+    {
+		print("triggerEnter");
 		
-		// HP down to 0
-		if (hp < 1) {
-			// Player One (bottom) gets last shot
-			if (other.gameObject.name == "playerProjectile(Clone)") {
+		if (other.gameObject.name == "playerProjectile(Clone)")
+        {
+			hp -= 1;
+			print("projectile1 collision: hp = ");
+			print(hp);
+			if (hp < 1)
+            {
+				// obj_ballClone = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
 				GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
 				ballBody = ball.GetComponent<Rigidbody2D>();
-				ballBody.AddForce(new Vector2(0,-ballForce));
+				ballBody.AddForce(new Vector2(0,-200f));
 				Destroy (gameObject);
 			}
-			
-			// Player Two (top) gets last shot
-			else if (other.gameObject.name == "playerProjectile2(Clone)") {
+		}
+		
+		if (other.gameObject.name == "playerProjectile2(Clone)")
+        {
+			hp -= 1;
+			print("projectile2 collision: hp = ");
+			print(hp);
+			if (hp < 1)
+            {
 				GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
 				ballBody = ball.GetComponent<Rigidbody2D>();
-				ballBody.AddForce(new Vector2(0,ballForce));
+				ballBody.AddForce(new Vector2(0,200f));
 				Destroy (gameObject);		
 			}
 		}
+			
 	}
 }
