@@ -19,5 +19,6 @@ public class playerControl : MonoBehaviour {
         var move = new Vector3(Input.GetAxis("Horizontal"), 0,0);
 		velX = move.x * max_speed * Time.deltaTime;
         transform.position += move * max_speed * Time.deltaTime;
+		transform.position = new Vector3(Mathf.Clamp(transform.position.x,-8,8),transform.position.y,transform.position.z);
 	}
 }

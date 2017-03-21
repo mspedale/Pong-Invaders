@@ -30,17 +30,22 @@ public class containmentScript : MonoBehaviour {
 		if (hp < 1) {
 			// Player One (bottom) gets last shot
 			if (other.gameObject.name == "playerProjectile(Clone)") {
-				GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
-				ballBody = ball.GetComponent<Rigidbody2D>();
-				ballBody.AddForce(new Vector2(Random.Range(-300.0f, 300.0f),-ballForce));
+				//GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
+				//ballBody = ball.GetComponent<Rigidbody2D>();
+				prefab_ball.SetActive(true);
+				prefab_ball.transform.SetParent(null);
+				prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-300.0f, 300.0f),-ballForce));
 				Destroy (gameObject);
 			}
 			
 			// Player Two (top) gets last shot
 			else if (other.gameObject.name == "playerProjectile2(Clone)") {
-				GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
-				ballBody = ball.GetComponent<Rigidbody2D>();
-				ballBody.AddForce(new Vector2(Random.Range(-300.0f, 300.0f),ballForce));
+				//GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
+				//ballBody = ball.GetComponent<Rigidbody2D>();
+				//ballBody.AddForce(new Vector2(Random.Range(-300.0f, 300.0f),ballForce));
+				prefab_ball.SetActive(true);
+				prefab_ball.transform.SetParent(null);
+				prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-300.0f, 300.0f),-ballForce));
 				Destroy (gameObject);		
 			}
 		}
