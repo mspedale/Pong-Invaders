@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
-
-public class gunScript : MonoBehaviour {
+    public class gunScript : MonoBehaviour {
 
 public GameObject playerProjectile;
 GameObject playerProjectileClone;
@@ -24,3 +22,4 @@ float t=0;
             
 	}
 }
+

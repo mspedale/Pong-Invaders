@@ -346,6 +346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fefeb53efa64f4d43b38011ec9b54ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velX: 0
 --- !u!1 &651776479
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +526,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1150873152}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a838b8625180c054a9b9122bd6ba9ba7, type: 3}
+  m_Script: {fileID: 11500000, guid: b435af8aa181b9a41914e3be6bae613f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerProjectile: {fileID: 1362647245297898, guid: 92139d82d9066c7408faf675c188134b,
@@ -687,7 +688,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4951420267311482, guid: 92139d82d9066c7408faf675c188134b, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1362647245297898, guid: 92139d82d9066c7408faf675c188134b, type: 2}
       propertyPath: m_Name
@@ -817,6 +818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada1c8be5ee93e64e865440ec4ec5269, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velX: 0
 --- !u!61 &1883153921
 BoxCollider2D:
   m_ObjectHideFlags: 0
