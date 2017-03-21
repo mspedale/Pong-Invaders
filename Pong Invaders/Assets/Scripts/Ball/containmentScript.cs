@@ -7,7 +7,7 @@ using UnityEngine;
 public class containmentScript : MonoBehaviour {
 
 	int hp = 10;
-	float ballForce = 200f;
+	float ballForce = 500f;
 	public GameObject prefab_ball;
 	Rigidbody2D ballBody;
 	
@@ -32,7 +32,7 @@ public class containmentScript : MonoBehaviour {
 			if (other.gameObject.name == "playerProjectile(Clone)") {
 				GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
 				ballBody = ball.GetComponent<Rigidbody2D>();
-				ballBody.AddForce(new Vector2(0,-ballForce));
+				ballBody.AddForce(new Vector2(Random.Range(-300.0f, 300.0f),-ballForce));
 				Destroy (gameObject);
 			}
 			
@@ -40,7 +40,7 @@ public class containmentScript : MonoBehaviour {
 			else if (other.gameObject.name == "playerProjectile2(Clone)") {
 				GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
 				ballBody = ball.GetComponent<Rigidbody2D>();
-				ballBody.AddForce(new Vector2(0,ballForce));
+				ballBody.AddForce(new Vector2(Random.Range(-300.0f, 300.0f),ballForce));
 				Destroy (gameObject);		
 			}
 		}
