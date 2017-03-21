@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class playerControl2 : MonoBehaviour {
 	
-	float m_speed = 13;
+	float max_speed = 13f;
+	public float velX = 0f;		// variable for imparting x-motion on ball
 	GameObject playerProjectileClone;
 	
 	// Use this for initialization
@@ -13,11 +14,10 @@ public class playerControl2 : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {		
-		
+	void FixedUpdate () {				
 		// movement
         var move = new Vector3(Input.GetAxis("Horizontal2"), 0,0);
-        transform.position += move * m_speed * Time.deltaTime;
-				
+		velX = move.x * max_speed * Time.deltaTime;
+        transform.position += move * max_speed * Time.deltaTime;
 	}
 }
