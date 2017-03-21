@@ -280,7 +280,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 535795893}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: acb47ba33a42dca4991cf35a3f02e7b4, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
@@ -688,7 +688,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4951420267311482, guid: 92139d82d9066c7408faf675c188134b, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1362647245297898, guid: 92139d82d9066c7408faf675c188134b, type: 2}
       propertyPath: m_Name
@@ -827,7 +827,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1883153917}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: acb47ba33a42dca4991cf35a3f02e7b4, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
