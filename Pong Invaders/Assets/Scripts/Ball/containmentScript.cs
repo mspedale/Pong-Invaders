@@ -21,33 +21,28 @@ public class containmentScript : MonoBehaviour {
 		
 	}
 	
+	// Collision event (hopefully just with player projectiles)
 	void OnTriggerEnter2D(Collider2D other) {
-		print("triggerEnter");
+		hp -= 1;
+		print(hp);
 		
-		if (other.gameObject.name == "playerProjectile(Clone)") {
-			hp -= 1;
-			print("projectile1 collision: hp = ");
-			print(hp);
-			if (hp < 1) {
-				// obj_ballClone = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
+		// HP down to 0
+		if (hp < 1) {
+			// Player One (bottom) gets last shot
+			if (other.gameObject.name == "playerProjectile(Clone)") {
 				GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
 				ballBody = ball.GetComponent<Rigidbody2D>();
-				ballBody.AddForce(new Vector2(0,-200f));
+				ballBody.AddForce(new Vector2(0,-ballForce));
 				Destroy (gameObject);
 			}
-		}
-		
-		if (other.gameObject.name == "playerProjectile2(Clone)") {
-			hp -= 1;
-			print("projectile2 collision: hp = ");
-			print(hp);
-			if (hp < 1) {
+			
+			// Player Two (top) gets last shot
+			else if (other.gameObject.name == "playerProjectile2(Clone)") {
 				GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
 				ballBody = ball.GetComponent<Rigidbody2D>();
-				ballBody.AddForce(new Vector2(0,200f));
+				ballBody.AddForce(new Vector2(0,ballForce));
 				Destroy (gameObject);		
 			}
 		}
-			
 	}
 }

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class playerControl : MonoBehaviour {
 	
-	float m_speed = 13;
+	float max_speed = 13f;
+	float velX = 0f;
 	GameObject playerProjectileClone;
 	
 	// Use this for initialization
@@ -17,7 +18,6 @@ public class playerControl : MonoBehaviour {
 		
 		// movement
         var move = new Vector3(Input.GetAxis("Horizontal"), 0,0);
-        transform.position += move * m_speed * Time.deltaTime;
-				
+        transform.position += move * max_speed * Time.deltaTime;				
 	}
 }
