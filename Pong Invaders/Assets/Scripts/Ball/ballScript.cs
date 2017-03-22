@@ -13,7 +13,8 @@ public class ballScript : MonoBehaviour {
 	public float deadZone;
 	private float activeZoneLeft, activeZoneRight;
 	private float currentVelocity;
-    AudioSource ballcolSound;
+    AudioSource colSound;
+    //AudioSource relSound;
 	
 	/*
 	float minSpeedY = 0.5f;
@@ -23,29 +24,39 @@ public class ballScript : MonoBehaviour {
 	//double velocity = new Vector3(velX,velY,0);
 	*/
 	
-	void Awake () {
+	void Awake ()
+    {
 		ballRigidBody = gameObject.GetComponent<Rigidbody2D>();
 		playerControl = GetComponent<playerControl>();
 		playerControl2 = GetComponent<playerControl2>();
+        //relSound.Play();
 	}
 	
-	void Start () {
-	//	velY = -minSpeedY;
+	void Start ()
+    {
+        //	velY = -minSpeedY;
+
+        //audio
+        //AudioSource[] sounds = GetComponents<AudioSource>();
+        //colSound = sounds[0];
+        //relSound = sounds[1];
 	}
 	
 	
-	void Update () {
+	void Update ()
+    {
 		// Movement update
 		// velocity =(velX,velY,0);
-	//	transform.position = new Vector3(0,velY,0);
-	currentVelocity = Mathf.Sqrt(Mathf.Pow(ballRigidBody.velocity.x,2)+Mathf.Pow(ballRigidBody.velocity.y,2));
+	    //transform.position = new Vector3(0,velY,0);
+	    currentVelocity = Mathf.Sqrt(Mathf.Pow(ballRigidBody.velocity.x,2)+Mathf.Pow(ballRigidBody.velocity.y,2));
 	}
 	
-	void OnCollisionEnter2D(Collision2D coll) {
-		//print("collisionEnter2D");
-		
-		// Imparts horizontal force using velX of paddle
-		/*
+	void OnCollisionEnter2D(Collision2D coll)
+    {
+        //print("collisionEnter2D");
+
+        // Imparts horizontal force using velX of paddle
+        /*
 		if (coll.gameObject.name == "obj_player") {
 			print("player 1 collision");
 			ballRigidBody.AddForce(new Vector2(coll.gameObject.GetComponent<playerControl>().velX,0));
@@ -55,9 +66,11 @@ public class ballScript : MonoBehaviour {
 			ballRigidBody.AddForce(new Vector2(coll.gameObject.GetComponent<playerControl2>().velX,0));
 		}
 		*/
-		if(coll.gameObject.name == "obj_player" || coll.gameObject.name == "obj_player2") {
-            //audio
-            gameObject.GetComponent<AudioSource>().Play();
+
+        //audio, plays collision sound if ball hits anything
+        gameObject.GetComponent<AudioSource>().Play();
+
+        if (coll.gameObject.name == "obj_player" || coll.gameObject.name == "obj_player2") {
             float leftBound = coll.transform.position.x-coll.transform.lossyScale.x/2;
 			float rightBound = coll.transform.position.x+coll.transform.lossyScale.x/2;
 			float contactPoint = coll.contacts[0].point.x;

@@ -13,14 +13,14 @@ public class containmentScript : MonoBehaviour {
 
     //audio
     AudioSource hitSound;
-    AudioSource relSound;
+    //AudioSource relSound;
 
     // Use this for initialization
     void Start ()
     {
-        AudioSource[] sounds = GetComponents<AudioSource>();
-        hitSound = sounds[0];
-        relSound = sounds[1];
+        //AudioSource[] sounds = GetComponents<AudioSource>();
+        //hitSound = sounds[0];
+        //relSound = sounds[1];
 	}
 	
 	// Update is called once per frame
@@ -34,8 +34,9 @@ public class containmentScript : MonoBehaviour {
     {
 		hp -= 1;
 		print(hp);
-        //audio
-        hitSound.Play();
+
+        //audio, plays if containment is hit by projectile
+        gameObject.GetComponent<AudioSource>().Play();
 
         // HP down to 0
         if (hp < 1)
@@ -46,7 +47,6 @@ public class containmentScript : MonoBehaviour {
                 //GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
                 //ballBody = ball.GetComponent<Rigidbody2D>();
 
-                relSound.Play();
                 prefab_ball.SetActive(true);
 				prefab_ball.transform.SetParent(null);
 				prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-300.0f, 300.0f),-ballForce));
@@ -60,7 +60,6 @@ public class containmentScript : MonoBehaviour {
                 //ballBody = ball.GetComponent<Rigidbody2D>();
                 //ballBody.AddForce(new Vector2(Random.Range(-300.0f, 300.0f),ballForce));
 
-                relSound.Play();
                 prefab_ball.SetActive(true);
 				prefab_ball.transform.SetParent(null);
 				prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-300.0f, 300.0f),-ballForce));
