@@ -13,6 +13,7 @@ public class ballScript : MonoBehaviour {
 	public float deadZone;
 	private float activeZoneLeft, activeZoneRight;
 	private float currentVelocity;
+    AudioSource ballcolSound;
 	
 	/*
 	float minSpeedY = 0.5f;
@@ -55,7 +56,9 @@ public class ballScript : MonoBehaviour {
 		}
 		*/
 		if(coll.gameObject.name == "obj_player" || coll.gameObject.name == "obj_player2") {
-			float leftBound = coll.transform.position.x-coll.transform.lossyScale.x/2;
+            //audio
+            gameObject.GetComponent<AudioSource>().Play();
+            float leftBound = coll.transform.position.x-coll.transform.lossyScale.x/2;
 			float rightBound = coll.transform.position.x+coll.transform.lossyScale.x/2;
 			float contactPoint = coll.contacts[0].point.x;
 			float contactNormal = ((rightBound - leftBound)-(contactPoint - leftBound))/coll.transform.lossyScale.x;
