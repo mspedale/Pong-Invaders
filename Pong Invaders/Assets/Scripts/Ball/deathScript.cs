@@ -15,7 +15,7 @@ public GameObject ContainmentPrefab;
 	}
 void OnTriggerEnter2D(Collider2D other){
 
-    if (other.gameObject.name == "prefab_ball(Clone)") {
+    if (other.gameObject.name == "prefab_ball") {
 
         Destroy (other.gameObject);
         GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity) as GameObject;
