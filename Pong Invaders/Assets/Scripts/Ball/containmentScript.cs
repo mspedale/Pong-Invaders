@@ -49,7 +49,7 @@ public class containmentScript : MonoBehaviour {
 
                 prefab_ball.SetActive(true);
 				prefab_ball.transform.SetParent(null);
-				prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-300.0f, 300.0f),-ballForce));
+				prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-150.0f, 150.0f),-ballForce));
 				Destroy (gameObject);
 			}
 			
@@ -62,7 +62,7 @@ public class containmentScript : MonoBehaviour {
 
                 prefab_ball.SetActive(true);
 				prefab_ball.transform.SetParent(null);
-				prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-300.0f, 300.0f),ballForce));
+				prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-150.0f, 150.0f),ballForce));
 				Destroy (gameObject);		
 			}
 		}
