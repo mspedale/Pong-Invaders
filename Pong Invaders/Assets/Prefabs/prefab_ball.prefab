@@ -250,9 +250,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5bdaec3143158244a7deb0e70d552b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj_player: {fileID: 0}
-  obj_player2: {fileID: 0}
-  reflectionAngle: 0
+  obj_player: {fileID: 1891326142608428, guid: cb04f3430d3fe174a84e417d5d04a903, type: 2}
+  obj_player2: {fileID: 1568278455851976, guid: 59d03557a514af643809192b3f9bf967,
+    type: 2}
+  reflectionAngle: 135
   deadZone: 0
 --- !u!212 &212367775698940056
 SpriteRenderer:

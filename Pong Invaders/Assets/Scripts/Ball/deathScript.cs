@@ -25,7 +25,7 @@ public class deathScript : MonoBehaviour
         {
             gameObject.GetComponent<AudioSource>().Play();
             Destroy (other.gameObject);
-            GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity) as GameObject;
+            GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity);// as GameObject;
 		}
     }
 }
