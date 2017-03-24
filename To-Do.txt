@@ -1,0 +1,27 @@
+------------------------
+Game mechanic additions
+------------------------
+1. Mothership damage
+	- Mothership has an hp, which is reduced by enemy projectiles while the shield is down.
+	- We'll need to implement a damage system with projectiles.  
+		-Create projectile tag and add 'damage' as a global variable of projectile.
+	- When hp is zero, that player loses!
+
+2. Mothership shields
+	- blocks projectiles from coming in contact with the mothership
+	- destroy (or deactivate: awake = false) upon contact with the ball
+	- Stay destroyed or deactivated for a certain (reasonably long) amount of time.
+	- Respawn the containment upon reactivation
+
+3. Containment movement
+	- Make the containment move in a way that makes it more fun to shoot competitively
+		- Suggested to make it oscillate. It'll be easier to hit when it's close to a wall,
+		  but if you're skilled enough to hit it when it's in the middle of the stage, you'll
+		  have more frequent opportunities to hit it!
+	- It should be stationary until it gets hit the first time.
+	- The more it gets shot, the faster it moves.  
+
+4. Player Damage
+	- Player paddles will have HP.
+	- HP will decrease when shot by another player or space invader enemy.
+	- When HP is 0, paddle will temporarily destroy or deactivate. 
