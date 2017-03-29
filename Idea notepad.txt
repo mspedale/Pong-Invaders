@@ -1,0 +1,12 @@
+Mothership abilities
+1. Spawn drone ships
+	- Help attack neutral space invaders and other player
+	- Ball reflects off them
+		- Die from reflection only if the ball was last touched by the opposing player
+2. Mothership-mounted gun
+	- Must be shot down by the opposing player
+	- Guarded by mothership shield
+3. Big honkin' lazer
+
+Design idea:
+	- When the containment breaks, the ball flies in a less predictable fashion to the player who DIDN'T hit it last
