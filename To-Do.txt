@@ -25,3 +25,7 @@ Game mechanic additions
 	- Player paddles will have HP.
 	- HP will decrease when shot by another player or space invader enemy.
 	- When HP is 0, paddle will temporarily destroy or deactivate. 
+
+5. Player Projectiles affecting the ball
+	- Start with player projectiles destroying upon contact with the ball, and imparting some y-force to it.
+	- Experiement with adding x-force depending on the ball and projectile's x-positions.  If it's too erratic, we'll cut it.
