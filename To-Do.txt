@@ -29,3 +29,8 @@ Game mechanic additions
 5. Player Projectiles affecting the ball
 	- Start with player projectiles destroying upon contact with the ball, and imparting some y-force to it.
 	- Experiement with adding x-force depending on the ball and projectile's x-positions.  If it's too erratic, we'll cut it.
+
+6. Sound Design (Matt)
+        - Standardize sounds for a more unified design (similar cuttoffs, lengths, etc.)
+        - Work on array function for randomizing sound to avoid redundancy on effects that repeat often (ball collision, laser, etc)
+        - (Implemented comment for this in ballscript, test later)

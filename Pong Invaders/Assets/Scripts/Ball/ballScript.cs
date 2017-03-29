@@ -13,8 +13,9 @@ public class ballScript : MonoBehaviour {
 	public float deadZone;
 	private float activeZoneLeft, activeZoneRight;
 	private float currentVelocity;
-    AudioSource colSound;
-    //AudioSource relSound;
+
+    public AudioSource colSound;
+    //public AudioSource relSound;
 	
 	/*
 	float minSpeedY = 0.5f;
@@ -36,10 +37,14 @@ public class ballScript : MonoBehaviour {
     {
         //	velY = -minSpeedY;
 
-        //audio
+        //audio, try this for implementing random sound array:
         //AudioSource[] sounds = GetComponents<AudioSource>();
         //colSound = sounds[0];
         //relSound = sounds[1];
+
+        //if that doesn't work, try this:
+        //colSound.clip = shotsound[Random.Range(o, shotsound.Length];
+        //colSound.Play();
 	}
 	
 	
