@@ -13,7 +13,7 @@ Game mechanic additions
 	- Stay destroyed or deactivated for a certain (reasonably long) amount of time.
 	- Respawn the containment upon reactivation
 
-3. Containment movement
+3. Containment movement - Completed (Cam)
 	- Make the containment move in a way that makes it more fun to shoot competitively
 		- Suggested to make it oscillate. It'll be easier to hit when it's close to a wall,
 		  but if you're skilled enough to hit it when it's in the middle of the stage, you'll
