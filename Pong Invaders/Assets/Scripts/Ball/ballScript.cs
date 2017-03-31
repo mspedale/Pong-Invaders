@@ -74,7 +74,8 @@ public class ballScript : MonoBehaviour {
 
         //audio, plays collision sound if ball hits anything
         gameObject.GetComponent<AudioSource>().Play();
-
+		
+		//  Collision with Players
         if (coll.gameObject.name == "obj_player" || coll.gameObject.name == "obj_player2") {
             float leftBound = coll.transform.position.x-coll.transform.lossyScale.x/2;
 			float rightBound = coll.transform.position.x+coll.transform.lossyScale.x/2;
@@ -105,6 +106,16 @@ public class ballScript : MonoBehaviour {
 				newY = -Mathf.Sin(newDirectionRadians)*Mathf.Abs(currentVelocity+0.25f);
 			if(!inDeadzone)
 				ballRigidBody.velocity = new Vector2(newX,newY);
+		}
+		
+		// Collision with Projectiles
+		else if (coll.gameObject.tag == "Projectile_p1") {
+			Vector2 projForce = new Vector2(0,currentVelocity + 0.25f);
+			ballRigidBody.velocity = projForce;
+		}
+		else if (coll.gameObject.tag == "Projectile_p2") {
+			Vector2 projForce = new Vector2(0,currentVelocity - 0.25f);
+			ballRigidBody.velocity = projForce;
 		}
 	}
 }

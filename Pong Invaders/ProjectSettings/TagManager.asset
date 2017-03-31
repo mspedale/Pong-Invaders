@@ -7,6 +7,8 @@ TagManager:
   - Ball
   - Player1
   - Player2
+  - Projectile_p1
+  - Projectile_p2
   layers:
   - Default
   - TransparentFX

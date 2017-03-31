@@ -50,7 +50,7 @@ GameObject:
   - component: {fileID: 82537863266598072}
   m_Layer: 0
   m_Name: prefab_ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ Transform:
   m_GameObject: {fileID: 1044002250130482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7392026, y: 1.7392036, z: 1.7392036}
+  m_LocalScale: {x: 2, y: 2, z: 1.7392036}
   m_Children:
   - {fileID: 4311867518220852}
   m_Father: {fileID: 0}
@@ -658,6 +658,7 @@ MonoBehaviour:
     type: 2}
   reflectionAngle: 135
   deadZone: 0
+  colSound: {fileID: 0}
 --- !u!212 &212465552702309790
 SpriteRenderer:
   m_ObjectHideFlags: 1

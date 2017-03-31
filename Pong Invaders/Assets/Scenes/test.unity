@@ -134,14 +134,6 @@ Prefab:
       propertyPath: m_Name
       value: obj_containment
       objectReference: {fileID: 0}
-    - target: {fileID: 4125318231386618, guid: 1da34ba499564134b92027dea4f7e750, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4125318231386618, guid: 1da34ba499564134b92027dea4f7e750, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1da34ba499564134b92027dea4f7e750, type: 2}
   m_IsPrefabParent: 0
@@ -998,7 +990,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1600154214}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a553debaf5b7a6409b69f23f70da090, type: 3}
+  m_Script: {fileID: 11500000, guid: b435af8aa181b9a41914e3be6bae613f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerProjectile: {fileID: 1362647245297898, guid: 92139d82d9066c7408faf675c188134b,

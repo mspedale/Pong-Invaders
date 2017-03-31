@@ -18,12 +18,11 @@ public class containmentScript : MonoBehaviour {
 	float amp =  6.5f;		// Amplitude of displacement
 	float freq = 0f;	// Frequency of oscillation  (increases with every shot fired)
 	float t = 0f;			// Time since oscillation began (in frames)
-	int startTime;		// Time that oscillation began
 	float x = 0f; 		// Current x position
 	float prevX = 0f;	// Previous x position
 	Vector3 newPosition = new Vector3 (0f,0f,0f);	// Need a Vector3 for use with MovePosition()
-	Vector2 newVelocity = new Vector2 (0f,0f);
-	int direction = 1;
+	int direction = 1;	// Indicates whether the containment is going right or left. Crucial for maintaining direction when frequency changes.
+	// Make this ^^^^ -1 or 1 randomly!
 	
     //audio
     AudioSource hitSound;
@@ -36,7 +35,7 @@ public class containmentScript : MonoBehaviour {
         //hitSound = sounds[0];
         //relSound = sounds[1];
 		
-		maxHP = 10;//rand.Next(6,12);
+		maxHP = 5;//rand.Next(6,12);
 		hp = maxHP;
 		containment = gameObject.GetComponent<Rigidbody2D>();
 	}
@@ -44,17 +43,13 @@ public class containmentScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		//Oscillation
+		//Movement Oscillation
 		if(hp < maxHP) {
 			t += 1 * direction;
 			prevX = x;
 			x = amp * Mathf.Sin(2 * Mathf.PI * freq * t);
 			newPosition.x = x;
 			containment.MovePosition(newPosition);
-			/*
-			newVelocity.x = x - prevX;
-			containment.velocity = newVelocity;
-			*/
 		}
 	}
 	

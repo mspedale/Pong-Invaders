@@ -402,6 +402,7 @@ MonoBehaviour:
   obj_player2: {fileID: 0}
   reflectionAngle: 0
   deadZone: 0
+  colSound: {fileID: 0}
 --- !u!114 &114414371509195264
 MonoBehaviour:
   m_ObjectHideFlags: 1
