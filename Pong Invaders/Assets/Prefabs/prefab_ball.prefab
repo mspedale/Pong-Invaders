@@ -27,7 +27,7 @@ GameObject:
   - component: {fileID: 82176838819400446}
   m_Layer: 0
   m_Name: prefab_ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -253,8 +253,9 @@ MonoBehaviour:
   obj_player: {fileID: 1891326142608428, guid: cb04f3430d3fe174a84e417d5d04a903, type: 2}
   obj_player2: {fileID: 1568278455851976, guid: 59d03557a514af643809192b3f9bf967,
     type: 2}
-  reflectionAngle: 135
+  reflectionAngle: 100
   deadZone: 0
+  colSound: {fileID: 0}
 --- !u!212 &212367775698940056
 SpriteRenderer:
   m_ObjectHideFlags: 1
