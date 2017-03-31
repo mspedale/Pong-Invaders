@@ -55,7 +55,16 @@ public class ballScript : MonoBehaviour {
 	    //transform.position = new Vector3(0,velY,0);
 	    currentVelocity = Mathf.Sqrt(Mathf.Pow(ballRigidBody.velocity.x,2)+Mathf.Pow(ballRigidBody.velocity.y,2));
 	}
-	
+	void OnTriggerEnter2D(Collider2D coll){
+		if (coll.gameObject.tag == "Projectile_p1") {
+			Vector2 projForce = new Vector2(0,currentVelocity + 0.25f);
+			//ballRigidBody.velocity = projForce;
+			ballRigidBody.velocity += (new Vector2(transform.position.x-coll.transform.position.x,transform.position.y-coll.transform.position.y)*10f);
+		}
+		else if (coll.gameObject.tag == "Projectile_p2") {
+			ballRigidBody.velocity += (new Vector2(transform.position.x-coll.transform.position.x,transform.position.y-coll.transform.position.y)*10f);
+		}		
+	}
 	void OnCollisionEnter2D(Collision2D coll)
     {
         //print("collisionEnter2D");
@@ -101,21 +110,14 @@ public class ballScript : MonoBehaviour {
 			float newX = Mathf.Cos(newDirectionRadians)*Mathf.Abs(currentVelocity);
 			float newY = 0;
 			if(coll.gameObject.name == "obj_player")
-				newY = Mathf.Sin(newDirectionRadians)*Mathf.Abs(currentVelocity+0.25f);
+				newY = Mathf.Sin(newDirectionRadians)*Mathf.Abs(currentVelocity+0.05f);
 			else if(coll.gameObject.name == "obj_player2")
-				newY = -Mathf.Sin(newDirectionRadians)*Mathf.Abs(currentVelocity+0.25f);
+				newY = -Mathf.Sin(newDirectionRadians)*Mathf.Abs(currentVelocity+0.05f);
 			if(!inDeadzone)
 				ballRigidBody.velocity = new Vector2(newX,newY);
 		}
 		
 		// Collision with Projectiles
-		else if (coll.gameObject.tag == "Projectile_p1") {
-			Vector2 projForce = new Vector2(0,currentVelocity + 0.25f);
-			ballRigidBody.velocity = projForce;
-		}
-		else if (coll.gameObject.tag == "Projectile_p2") {
-			Vector2 projForce = new Vector2(0,currentVelocity - 0.25f);
-			ballRigidBody.velocity = projForce;
-		}
+
 	}
 }

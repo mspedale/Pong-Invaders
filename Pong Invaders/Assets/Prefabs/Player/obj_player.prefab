@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4512617149230560}
   - component: {fileID: 82684448175379642}
-  - component: {fileID: 114807037426245654}
+  - component: {fileID: 114122117219992604}
   m_Layer: 0
   m_Name: gun
   m_TagString: Untagged
@@ -67,7 +67,7 @@ Transform:
   m_GameObject: {fileID: 1891326142608428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -8, z: 0}
-  m_LocalScale: {x: 3, y: 0.25814414, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4512617149230560}
   m_Father: {fileID: 0}
@@ -84,9 +84,9 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: acb47ba33a42dca4991cf35a3f02e7b4, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.017971694, y: -0.13121921}
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.99999994}
+  m_Size: {x: 7.3827224, y: 1.5248699}
 --- !u!82 &82684448175379642
 AudioSource:
   m_ObjectHideFlags: 1
@@ -167,7 +167,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114807037426245654
+--- !u!114 &114122117219992604
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1050740582915358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b435af8aa181b9a41914e3be6bae613f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a553debaf5b7a6409b69f23f70da090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerProjectile: {fileID: 1362647245297898, guid: 92139d82d9066c7408faf675c188134b,
@@ -223,7 +223,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c78afa973b7bc3545acecfd6aced15f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 51b74255477a8854f85319b567a35411, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
