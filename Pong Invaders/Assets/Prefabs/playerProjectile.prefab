@@ -20,8 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4951420267311482}
   - component: {fileID: 212882838344172914}
-  - component: {fileID: 114787980930014374}
   - component: {fileID: 61728074758665970}
+  - component: {fileID: 114244708788102140}
+  - component: {fileID: 114466518552524718}
   m_Layer: 0
   m_Name: playerProjectile
   m_TagString: Projectile_p1
@@ -56,7 +57,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 0.99999994}
---- !u!114 &114787980930014374
+--- !u!114 &114244708788102140
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -64,10 +65,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1362647245297898}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7102c2ccc0e6df44aa63ca033f51cfec, type: 3}
+  m_Script: {fileID: 11500000, guid: da7356c5495aa864da60fb2c57e61c71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.5
+--- !u!114 &114466518552524718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1362647245297898}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7102c2ccc0e6df44aa63ca033f51cfec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.2
   direction: 1
 --- !u!212 &212882838344172914
 SpriteRenderer:

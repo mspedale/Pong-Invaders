@@ -55,9 +55,17 @@ public class ballScript : MonoBehaviour {
 	    //transform.position = new Vector3(0,velY,0);
 	    currentVelocity = Mathf.Sqrt(Mathf.Pow(ballRigidBody.velocity.x,2)+Mathf.Pow(ballRigidBody.velocity.y,2));
 	}
+	
+	
 	void OnTriggerEnter2D(Collider2D coll){
+		
+		//audio, plays collision sound if ball hits anything
+        gameObject.GetComponent<AudioSource>().Play();
+		
+		
+		// Collision with Projectiles
 		if (coll.gameObject.tag == "Projectile_p1") {
-			Vector2 projForce = new Vector2(0,currentVelocity + 0.25f);
+			Vector2 projForce = new Vector2(0,currentVelocity + 0.15f);
 			//ballRigidBody.velocity = projForce;
 			ballRigidBody.velocity += (new Vector2(transform.position.x-coll.transform.position.x,transform.position.y-coll.transform.position.y)*10f);
 		}
@@ -65,6 +73,8 @@ public class ballScript : MonoBehaviour {
 			ballRigidBody.velocity += (new Vector2(transform.position.x-coll.transform.position.x,transform.position.y-coll.transform.position.y)*10f);
 		}		
 	}
+	
+	
 	void OnCollisionEnter2D(Collision2D coll)
     {
         //print("collisionEnter2D");
@@ -84,6 +94,8 @@ public class ballScript : MonoBehaviour {
         //audio, plays collision sound if ball hits anything
         gameObject.GetComponent<AudioSource>().Play();
 		
+		
+	
 		//  Collision with Players
         if (coll.gameObject.name == "obj_player" || coll.gameObject.name == "obj_player2") {
             float leftBound = coll.transform.position.x-coll.transform.lossyScale.x/2;
@@ -117,7 +129,6 @@ public class ballScript : MonoBehaviour {
 				ballRigidBody.velocity = new Vector2(newX,newY);
 		}
 		
-		// Collision with Projectiles
-
+		
 	}
 }

@@ -1,6 +1,6 @@
 #pragma strict
 
-var speed = 0.2;
+var speed = 0.5;
 var direction = 1;
 var posX;
 var posY;
