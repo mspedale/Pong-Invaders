@@ -9,6 +9,7 @@ TagManager:
   - Player2
   - Projectile_p1
   - Projectile_p2
+  - Shield
   layers:
   - Default
   - TransparentFX
