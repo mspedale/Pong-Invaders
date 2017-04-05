@@ -1,19 +1,59 @@
 ------------------------
 Game mechanic additions
 ------------------------
-1. Mothership damage
-	- Mothership has an hp, which is reduced by enemy projectiles while the shield is down.
-	- We'll need to implement a damage system with projectiles.  
-		-Create projectile tag and add 'damage' as a global variable of projectile.
-	- When hp is zero, that player loses!
 
-2. Mothership shields
-	- blocks projectiles from coming in contact with the mothership
-	- destroy (or deactivate: awake = false) upon contact with the ball
-	- Stay destroyed or deactivated for a certain (reasonably long) amount of time.
-	- Respawn the containment upon reactivation
 
-3. Containment movement - Completed (Cam)
+1. Player Damage
+	- Player paddles will have HP.
+	- HP will decrease when shot by another player or space invader enemy.
+	- When HP is 0, paddle will temporarily destroy or deactivate. 
+
+2. Space Invader enemies
+	a. Spawn with containment
+	b. Ball interaction
+		- The ball reflects off the space invaders, destroying them. The interaction is similar to wall interactions. X or Y velocity is simply made negative.
+	c. Destroy upon contact with player projectile
+	d. Shoot their own projectiles
+		- They will shoot their own projectiles, unique from player projectiles.
+		- These projectiles damage players and their motherships (if the shield is down), but do not affect the ball.
+	e. Movement
+		- Similar to the original "Space Invaders," they will move horizontally from one side of the screen to the other, 
+		  advancing vertically each time they reach a horizontal edge.
+		- As they advance toward a player, they shoot more often.
+	   	- If allowed to advance to maximum, they kimikaze attack the player or mothership.
+
+3. Mothership Abilities
+	a. Fighter Drones
+		- Defend the player and the mothership
+		- Shoot their own projectile
+		- Useful for quickly taking down space invaders
+		- Reflect the ball toward the opposing player.  Maybe they don't get destroyed on contact?
+		- Destroyed by enemy projectiles
+		
+	b. Mounted Guns
+		- Big guns mounted on the mothership.  These projectiles do considerable damage
+		- The mothership's shield defends the guns from attack.
+		- Must be taken out either by the player, or the opposing mothership's mounted guns.
+
+	c. Big honkin' lazer
+		- A huge lazer that comes from the center of the mothership.  Does massive damage!
+		- It can penetrate an enemy mothership's shields, but that will mean it does less damage overall.
+		- The opposing player can absorb some of the damage with their paddle, if need be.
+
+4. Acquired gun upgrades
+
+
+5. Sound Design (Matt)
+        - Standardize sounds for a more unified design (similar cuttoffs, lengths, etc.)
+        - Work on array function for randomizing sound to avoid redundancy on effects that repeat often (ball collision, laser, etc)
+        - (Implemented comment for this in ballscript, test later)
+
+
+---------------
+Completed Tasks
+---------------
+
+1. Containment movement - Completed (Cam)
 	- Make the containment move in a way that makes it more fun to shoot competitively
 		- Suggested to make it oscillate. It'll be easier to hit when it's close to a wall,
 		  but if you're skilled enough to hit it when it's in the middle of the stage, you'll
@@ -21,16 +61,19 @@ Game mechanic additions
 	- It should be stationary until it gets hit the first time.
 	- The more it gets shot, the faster it moves.  
 
-4. Player Damage
-	- Player paddles will have HP.
-	- HP will decrease when shot by another player or space invader enemy.
-	- When HP is 0, paddle will temporarily destroy or deactivate. 
+2. Mothership damage - Completed (Jonah)
+	- Mothership has an hp, which is reduced by enemy projectiles while the shield is down.
+	- We'll need to implement a damage system with projectiles.  
+		-Create projectile tag and add 'damage' as a global variable of projectile.
+	- When hp is zero, that player loses!
 
-5. Player Projectiles affecting the ball
-	- Start with player projectiles destroying upon contact with the ball, and imparting some y-force to it.
-	- Experiement with adding x-force depending on the ball and projectile's x-positions.  If it's too erratic, we'll cut it.
+3. Mothership shields - Completed (Jonah)
+	- blocks projectiles from coming in contact with the mothership
+	- destroy (or deactivate: awake = false) upon contact with the ball
+	- Stay destroyed or deactivated for a certain (reasonably long) amount of time.
+	- Respawn the containment upon reactivation
 
-6. Sound Design (Matt)
-        - Standardize sounds for a more unified design (similar cuttoffs, lengths, etc.)
-        - Work on array function for randomizing sound to avoid redundancy on effects that repeat often (ball collision, laser, etc)
-        - (Implemented comment for this in ballscript, test later)
+4. Player Projectiles affecting the ball - Functioning, but needs revision (Cam)
+	- Instead of an outward force coming from the projectile center point, compare 
+	  ball and projectile x-values and distribute x/y forces imparted directly on the ball.
+	  (diagram in notebook)
