@@ -54,7 +54,7 @@ function OnGUI ()
 		// Loads main menu (not implemented)
 		if (GUI.Button (Rect (Screen.width/2 - 100,Screen.height/2 - 120, 200, 100), "Main Menu")) 
 		{
-        	Application.LoadLevel("Main Menu");
+        	Application.LoadLevel("MainMenu");
             Time.timeScale = 1;
         }
         // restarts game (not implemented)
