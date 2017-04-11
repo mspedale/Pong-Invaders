@@ -8,11 +8,11 @@ Game mechanic additions
 	- HP will decrease when shot by another player or space invader enemy.
 	- When HP is 0, paddle will temporarily destroy or deactivate. 
 
-2. Space Invader enemies
+2. Space Invader enemies - In Progress (Cam)
 	a. Spawn with containment
 	b. Ball interaction
 		- The ball reflects off the space invaders, destroying them. The interaction is similar to wall interactions. X or Y velocity is simply made negative.
-	c. Destroy upon contact with player projectile
+	c. Destroy upon contact with player projectile -- done
 	d. Shoot their own projectiles
 		- They will shoot their own projectiles, unique from player projectiles.
 		- These projectiles damage players and their motherships (if the shield is down), but do not affect the ball.
@@ -25,11 +25,15 @@ Game mechanic additions
 3. Mothership Abilities
 	a. Fighter Drones
 		- Defend the player and the mothership
-		- Shoot their own projectile
+		- Located between the mothership's shield and the player's line of movement
+		- Shoot projectiles 
 		- Useful for quickly taking down space invaders
-		- Reflect the ball toward the opposing player.  Maybe they don't get destroyed on contact?
+		- Reflect the ball toward the opposing player.
 		- Destroyed by enemy projectiles
 		
+		- design idea: Have fighter drones and mounted guns fire when the player has the fire button pressed.
+				unlike the player's gun, they keep firing when the button is held down.
+
 	b. Mounted Guns
 		- Big guns mounted on the mothership.  These projectiles do considerable damage
 		- The mothership's shield defends the guns from attack.
