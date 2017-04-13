@@ -22,12 +22,17 @@ function OnGUI ()
     {
         if (GUI.Button (Rect (Screen.width/2 - 150, Screen.height/2 + 250, 100, 50), "Back")) 
         {
-            Application.LoadLevel("MainMenu");
+            Application.LoadLevel("HowToPlay");
         }
 
         if (GUI.Button (Rect (Screen.width/2 + 35, Screen.height/2 + 250, 100, 50), "Next")) 
         {
-            Application.LoadLevel("HowToPlay2");
+            Application.LoadLevel("HowToPlay3");
+        }
+
+        if (GUI.Button (Rect (Screen.width/2 - 275, Screen.height/2 + 250, 100, 50), "Main Menu")) 
+        {
+            Application.LoadLevel("MainMenu");
         }
     }
 }
