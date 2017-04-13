@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-var speed = 0.1;
+var speed = 0.03;
 var crawling = false;
 var creds;
 
@@ -55,7 +55,8 @@ function Update ()
     }
 
     // moves text upward
-    transform.Translate(Vector3.up * Time.deltaTime * speed);
+    // transform.Translate(Vector3.up * Time.deltaTime * speed);
+    transform.Translate(Vector3.up * 0.02 * speed);
 
 
     /*  Stops text at y position; implement individual line deletion later
@@ -64,6 +65,7 @@ function Update ()
     	crawling = false;
     }
     */
+
 }
 
 function OnGUI () 
