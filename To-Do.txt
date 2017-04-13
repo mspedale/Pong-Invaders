@@ -77,7 +77,18 @@ Completed Tasks
 	- Stay destroyed or deactivated for a certain (reasonably long) amount of time.
 	- Respawn the containment upon reactivation
 
-4. Player Projectiles affecting the ball - Functioning, but needs revision (Cam)
+4. Player Projectiles affecting the ball - Functioning, needs revision (Cam)
 	- Instead of an outward force coming from the projectile center point, compare 
 	  ball and projectile x-values and distribute x/y forces imparted directly on the ball.
 	  (diagram in notebook)
+	  
+5. Main Menu Screen - Functioning, needs revision (Matt)
+	- Same BG as main game for simple transition to matches
+	- Multiple buttons for different scenes, such as Play Game, How To Play, Credits
+	- Exit Game button for easy quitting
+	- Should have space for Pong Invaders and BitJunkie logos
+	
+6. Pause Menu - Functioning, needs revision (Matt)
+	- Pause game when escape key is pressed
+	- Buttons to resume game, restart game, or return to main menu
+	
