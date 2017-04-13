@@ -92,3 +92,8 @@ Completed Tasks
 	- Pause game when escape key is pressed
 	- Buttons to resume game, restart game, or return to main menu
 	
+7. How to Play Menu - Completed (Matt)
+        - Accessible from Main Menu
+	- Should teach players how the game works without too much information
+	- Contains functionality to add more pages if needed
+	
