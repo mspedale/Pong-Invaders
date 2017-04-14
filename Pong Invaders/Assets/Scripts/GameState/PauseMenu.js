@@ -2,7 +2,7 @@
   
 var paused : boolean;
 var myString : String = "Mute";
-var Mute : boolean;
+//var Mute : boolean;
 var guiSkin : GUISkin;
   
 function Start () 
@@ -28,6 +28,7 @@ function Update ()
 		Time.timeScale = 1;
 	}
   
+    /*
     if(Mute == true)
     {     
 		gameObject.GetComponent(AudioListener).enabled = false;   
@@ -36,6 +37,7 @@ function Update ()
     {
         gameObject.GetComponent(AudioListener).enabled = true;
     }
+    */
   
 }
   
@@ -64,6 +66,7 @@ function OnGUI ()
             Time.timeScale = 1;
         }
         // mutes / unmutes game (not implemented)
+        /*
         if (GUI.Button (Rect (Screen.width/2 - 100,Screen.height/2 + 120,200,100), myString))
         {
             if (myString == "Mute")
@@ -77,5 +80,6 @@ function OnGUI ()
           		Mute = false;
           	}
         }
+        */
 	}
 }
