@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerControl2 : MonoBehaviour {
+public class playerControl2 : MonoBehaviour
+{
 	
 	float max_speed = 13f;
 	public float velX = 0f;		// variable for imparting x-motion on ball
@@ -11,19 +12,22 @@ public class playerControl2 : MonoBehaviour {
     bool mov = true;
 	
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 		
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {				
+	void FixedUpdate ()
+    {				
 		// movement
         if(mov){
         var move = new Vector3(Input.GetAxis("Horizontal2"), 0,0);
 		velX = move.x * max_speed * Time.deltaTime;
         transform.position += move * max_speed * Time.deltaTime;
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x,-8,8),transform.position.y,transform.position.z);
-             if(hp<=0){
+                //transform.position = new Vector3(Mathf.Clamp(transform.position.x,-8,8),transform.position.y,transform.position.z);     slightly offscreen
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -6, 6), transform.position.y, transform.position.z);  //clamped onscreen
+        if(hp<=0){
             StartCoroutine(PlayerDie());
         }
         }
@@ -41,4 +45,5 @@ public class playerControl2 : MonoBehaviour {
           hp=10;
           mov=true;
  }
+
 }

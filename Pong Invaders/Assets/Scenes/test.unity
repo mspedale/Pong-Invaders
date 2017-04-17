@@ -868,8 +868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54c80068550b56458d33e0c305f493b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ContainmentPrefab: {fileID: 1044002250130482, guid: 1da34ba499564134b92027dea4f7e750,
-    type: 2}
+  ContainmentPrefab: {fileID: 0}
 --- !u!82 &609637565
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1071,8 +1070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be0ff882b62d1f469513add9353c948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ContainmentPrefab: {fileID: 1044002250130482, guid: 1da34ba499564134b92027dea4f7e750,
-    type: 2}
+  ContainmentPrefab: {fileID: 0}
 --- !u!82 &907960340
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1408,8 +1406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57c87d84ac0ec549be7e10ffee69257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ContainmentPrefab: {fileID: 1044002250130482, guid: 1da34ba499564134b92027dea4f7e750,
-    type: 2}
+  ContainmentPrefab: {fileID: 0}
 --- !u!82 &1016580315
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1925,8 +1922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be0ff882b62d1f469513add9353c948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ContainmentPrefab: {fileID: 1044002250130482, guid: 1da34ba499564134b92027dea4f7e750,
-    type: 2}
+  ContainmentPrefab: {fileID: 0}
 --- !u!82 &1830247992
 AudioSource:
   m_ObjectHideFlags: 0
