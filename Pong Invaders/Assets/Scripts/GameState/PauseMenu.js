@@ -1,4 +1,4 @@
-﻿#pragma strict
+#pragma strict
   
 var paused : boolean;
 var myString : String = "Mute";
@@ -28,7 +28,7 @@ function Update ()
 		Time.timeScale = 1;
 	}
   
-    if(Mute == true)
+  /*  if(Mute == true)
     {     
 		gameObject.GetComponent(AudioListener).enabled = false;   
     }
@@ -36,7 +36,7 @@ function Update ()
     {
         gameObject.GetComponent(AudioListener).enabled = true;
     }
-  
+  */
 }
   
 // JavaScript

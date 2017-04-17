@@ -28,10 +28,11 @@ function Update () {
 	}
 	*/
 }
-
+/*
 function OnTriggerEnter2D(other: Collider2D) {
 	Destroy (gameObject);
 }
+*/
 
 function OnCollisionEnter2D(coll: Collision2D) {
 	if (coll.gameObject.tag == "Ball") {

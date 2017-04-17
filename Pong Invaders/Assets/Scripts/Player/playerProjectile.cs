@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +22,9 @@ public class playerProjectile : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D coll) {
+        if(coll.gameObject.tag!= "Player1"){
 		Destroy (gameObject);
+        }
 	}
 	
 	void OnCollisionEnter2D(Collision2D coll) {
