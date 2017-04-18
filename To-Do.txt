@@ -1,6 +1,6 @@
-------------------------
-Game mechanic additions
-------------------------
+------------------------------------
+Game Mechanic Additions (Essential)
+------------------------------------
 
 
 1. Player Damage
@@ -11,8 +11,8 @@ Game mechanic additions
 2. Space Invader enemies - In Progress (Cam)
 	a. Spawn with containment
 	b. Ball interaction
-		- The ball reflects off the space invaders, destroying them. The interaction is similar to wall interactions. X or Y velocity is simply made negative.
-	c. Destroy upon contact with player projectile -- done
+		- The ball reflects off the space invaders, destroying them. The interaction is similar to wall interactions. X or Y 			  velocity is simply made negative.
+	c. Destroy upon contact with player projectile -- Done
 	d. Shoot their own projectiles
 		- They will shoot their own projectiles, unique from player projectiles.
 		- These projectiles damage players and their motherships (if the shield is down), but do not affect the ball.
@@ -22,7 +22,26 @@ Game mechanic additions
 		- As they advance toward a player, they shoot more often.
 	   	- If allowed to advance to maximum, they kimikaze attack the player or mothership.
 
-3. Mothership Abilities
+3. Sound Design (Matt)
+        - Standardize sounds for a more unified design (similar cuttoffs, lengths, etc.)
+        - Work on array function for randomizing sound to avoid redundancy on effects that repeat often (ball collision, laser, etc)
+        - (Implemented comment for this in ballscript, test later)
+	
+4. End State
+	- Game needs to have a definite end. Can be handled one of two ways:
+		a) When a player's mothership is destroyed, the game ends. The surviving player wins.
+		b) When a player's mothership is destroyed, the round ends. The surviving player is awarded a point,
+		   and the game ends when one player reaches a certain number of points. The first player to score
+		   that amount of points wins.
+	- Upon the game ending, a menu should appear that allows the player to start another game, exit to the main menu,
+	  or exit the game completely.
+
+
+------------------------------------
+Game Mechanic Additions (Extra)
+------------------------------------
+
+1. Mothership Abilities
 	a. Fighter Drones
 		- Defend the player and the mothership
 		- Located between the mothership's shield and the player's line of movement
@@ -31,7 +50,7 @@ Game mechanic additions
 		- Reflect the ball toward the opposing player.
 		- Destroyed by enemy projectiles
 		
-		- design idea: Have fighter drones and mounted guns fire when the player has the fire button pressed.
+		- Design idea: Have fighter drones and mounted guns fire when the player has the fire button pressed.
 				unlike the player's gun, they keep firing when the button is held down.
 
 	b. Mounted Guns
@@ -44,14 +63,7 @@ Game mechanic additions
 		- It can penetrate an enemy mothership's shields, but that will mean it does less damage overall.
 		- The opposing player can absorb some of the damage with their paddle, if need be.
 
-4. Acquired gun upgrades
-
-
-5. Sound Design (Matt)
-        - Standardize sounds for a more unified design (similar cuttoffs, lengths, etc.)
-        - Work on array function for randomizing sound to avoid redundancy on effects that repeat often (ball collision, laser, etc)
-        - (Implemented comment for this in ballscript, test later)
-
+2. Acquired gun upgrades
 
 ---------------
 Completed Tasks
@@ -82,7 +94,7 @@ Completed Tasks
 	  ball and projectile x-values and distribute x/y forces imparted directly on the ball.
 	  (diagram in notebook)
 	  
-5. Main Menu Screen - Functioning, needs revision (Matt)
+5. Main Menu Screen - Completed (Matt)
 	- Same BG as main game for simple transition to matches
 	- Multiple buttons for different scenes, such as Play Game, How To Play, Credits
 	- Exit Game button for easy quitting
@@ -91,6 +103,10 @@ Completed Tasks
 6. Pause Menu - Functioning, needs revision (Matt)
 	- Pause game when escape key is pressed
 	- Buttons to resume game, restart game, or return to main menu
+	- Currently two bugs: 
+		~Ball container shifts positions when unpaused
+		~Players can fire one shot during pause
+		~Should be fixable by consolidating time variables (Time.time and Time.timescale)
 	
 7. How to Play Menu - Completed (Matt)
         - Accessible from Main Menu
