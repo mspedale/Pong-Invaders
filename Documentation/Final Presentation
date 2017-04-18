@@ -1,0 +1,22 @@
+Due: April 25th / 27th
+
+Requirements:
+- Maximum length of 15 minutes (no minimum length)
+- Each team member must talk
+- No Powerpoint
+- Must present game running in Unity (no videos)
+- Kooima will pull game code from GitHub on Friday, April 28th, 
+  so we have some additional time to work after the 25th / 27th
+  (but the presentation grade is based on the game at presentation time)
+- Final grade depends on three factors:
+  1) Quality of final presentation
+  2) Quality of the game itself when Kooima pulls the repo
+  3) Individual Participation (number of commits and lines of code added)
+
+Presentation:
+- Demonstrate full game. Should go through main menu, show off non-game menu screens, play a match of Pong Invaders.
+- Cameron: Talk about game design, programming
+- Jonah: Talk about game design, programming
+- Matt: Talk about programming, sound & music
+- Tatyana: Talk about art
+- Jeff: Talk about music
