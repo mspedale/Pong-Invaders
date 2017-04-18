@@ -22,7 +22,7 @@ public class script_Invader1 : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		//destroys invader if it is hit by the fighter ship projectile
-		if (coll.gameObject.tag == "Projectile_p1") 
+		if (coll.gameObject.tag == "Projectile_p1" || coll.gameObject.tag == "Projectile_p2") 
 		{
 			Destroy (gameObject);
 		}

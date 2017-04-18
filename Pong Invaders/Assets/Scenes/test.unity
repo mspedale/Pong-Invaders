@@ -143,13 +143,12 @@ Transform:
 --- !u!114 &110854009
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114987922671600530, guid: cb04f3430d3fe174a84e417d5d04a903,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 110854007}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b435af8aa181b9a41914e3be6bae613f, type: 3}
+  m_Script: {fileID: 11500000, guid: d559d1ca862670543bbd878e5a5c087c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerProjectile: {fileID: 1362647245297898, guid: 92139d82d9066c7408faf675c188134b,
@@ -868,7 +867,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a54c80068550b56458d33e0c305f493b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ContainmentPrefab: {fileID: 0}
+  ContainmentPrefab: {fileID: 1044002250130482, guid: 1da34ba499564134b92027dea4f7e750,
+    type: 2}
 --- !u!82 &609637565
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1163,7 +1163,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 985401019}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1406,7 +1406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f57c87d84ac0ec549be7e10ffee69257, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ContainmentPrefab: {fileID: 0}
+  ContainmentPrefab: {fileID: 1044002250130482, guid: 1da34ba499564134b92027dea4f7e750,
+    type: 2}
 --- !u!82 &1016580315
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1842,7 +1843,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1609102035}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
