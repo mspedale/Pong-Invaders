@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//handles the control for player 2's fighter ship
 public class playerControl2 : MonoBehaviour
 {
 	
@@ -21,29 +22,36 @@ public class playerControl2 : MonoBehaviour
 	void FixedUpdate ()
     {				
 		// movement
-        if(mov){
-        var move = new Vector3(Input.GetAxis("Horizontal2"), 0,0);
-		velX = move.x * max_speed * Time.deltaTime;
-        transform.position += move * max_speed * Time.deltaTime;
-                //transform.position = new Vector3(Mathf.Clamp(transform.position.x,-8,8),transform.position.y,transform.position.z);     slightly offscreen
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, -6, 6), transform.position.y, transform.position.z);  //clamped onscreen
-        if(hp<=0){
+        if(mov)
+		{
+        	var move = new Vector3(Input.GetAxis("Horizontal2"), 0,0);
+			velX = move.x * max_speed * Time.deltaTime;
+        	transform.position += move * max_speed * Time.deltaTime;
+            //transform.position = new Vector3(Mathf.Clamp(transform.position.x,-8,8),transform.position.y,transform.position.z);     slightly offscreen
+        	transform.position = new Vector3(Mathf.Clamp(transform.position.x, -6, 6), transform.position.y, transform.position.z);  //clamped onscreen
+        	
+			//players die when they are killed
+			if(hp<=0)
+			{
             StartCoroutine(PlayerDie());
-        }
+        	}
         }
     }
         
-        void OnTriggerEnter2D(Collider2D coll) {
+	void OnTriggerEnter2D(Collider2D coll) 
+	{
 
-		if (coll.gameObject.name == "playerProjectile(Clone)") {
+		if(coll.gameObject.name == "playerProjectile(Clone)") 
+		{
 			hp--;
 		}
-        }
-      IEnumerator PlayerDie() {
+    }
+
+	IEnumerator PlayerDie() 
+	{
           mov=false;
           yield return new WaitForSeconds(3);
           hp=10;
           mov=true;
- }
-
+ 	}
 }

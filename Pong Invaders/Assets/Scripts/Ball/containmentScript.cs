@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//handles ball container behavior
+public class containmentScript : MonoBehaviour 
+{
 
-public class containmentScript : MonoBehaviour {
-
-	//Random rand = new Random();
 	int maxHP;
 	int hp;
 	float ballForce = 500f;
@@ -31,11 +31,13 @@ public class containmentScript : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+		//tentative array-based sound implementation, may be unneccessary
         //AudioSource[] sounds = GetComponents<AudioSource>();
         //hitSound = sounds[0];
         //relSound = sounds[1];
-		
-		maxHP = 5;//rand.Next(6,12);
+
+		//initalize containment HP
+		maxHP = 5; //rand.Next(6,12); (testing health)
 		hp = maxHP;
 		containment = gameObject.GetComponent<Rigidbody2D>();
 	}
@@ -43,8 +45,9 @@ public class containmentScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		//Movement Oscillation
-		if(hp < maxHP) {
+		//Movement oscillation based on HP
+		if(hp < maxHP) 
+		{
 			t += 1 * direction;
 			prevX = x;
 			x = amp * Mathf.Sin(2 * Mathf.PI * freq * t);
@@ -58,16 +61,18 @@ public class containmentScript : MonoBehaviour {
     {	
 		// HP modification
 		hp -= 1;
-		print(hp);
+		print(hp); //testing
 		
 		// Frequency modification
 		freq += 0.001f;
-		if (x-prevX >= 0) {
+		if (x-prevX >= 0) 
+		{
 			print("going right");
 			t = (Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq);	// offsets t so x won't make a crazy jump when frequency changes
 			direction = 1;
 		}
-		else {
+		else 
+		{
 			print("going left");
 			t = ((Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq));
 			direction = -1;

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//handles death behavior for container
 public class deathScript : MonoBehaviour
 {
 
@@ -25,7 +27,7 @@ public class deathScript : MonoBehaviour
         {
             gameObject.GetComponent<AudioSource>().Play();
             Destroy (other.gameObject);
-            GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity);// as GameObject;
+            GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity);
 		}
     }
 }

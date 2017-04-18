@@ -2,9 +2,16 @@
 
 var menu : boolean;
 var guiSkin : GUISkin;
-  
+
+
+//Handles main menu of the game
+//that is displayed upon starting.
+//Should have buttons to direct the player to screens such as:
+//"Start Game", "How to Play", "Credits", and a way to exit
+//Maybe a "Lore" page if we want to add that from the wiki
 function Start () 
 {
+	//initializes menu
 	menu = !menu;
 }
 
@@ -19,11 +26,13 @@ var icon : Texture2D;
 
 function OnGUI () 
 {
+	//initializes GUIskin
 	GUI.skin = guiSkin;
 
-	// GUI.Box (Rect (10,10, 100, 50), icon, frameStyle);
+	//initializes GUI button
 	if(menu)
 	{
+	    //                       x position            y position      x-width y-width  text
 		if (GUI.Button (Rect (Screen.width/2 - 100, Screen.height/2 - 200, 200, 50), "Start Game")) 
 		{
         	Application.LoadLevel("test");
@@ -43,5 +52,5 @@ function OnGUI ()
         {
         	Application.Quit();
         }
-     }	
+	}	
 }

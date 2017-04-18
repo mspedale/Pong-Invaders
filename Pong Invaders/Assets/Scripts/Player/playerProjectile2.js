@@ -5,11 +5,13 @@ var direction = -1;
 var posX;
 var posY;
 
-function Start () {
+function Start () 
+{
 	
 }
 
-function Update () {
+function Update () 
+{
 	// Position = position + speed
 	gameObject.transform.position.y += speed * direction;
 	
@@ -34,8 +36,10 @@ function OnTriggerEnter2D(other: Collider2D) {
 }
 */
 
-function OnCollisionEnter2D(coll: Collision2D) {
-	if (coll.gameObject.tag == "Ball") {
+function OnCollisionEnter2D(coll: Collision2D) 
+{
+	if (coll.gameObject.tag == "Ball") 
+	{
 		Destroy (gameObject);
 	}
 }

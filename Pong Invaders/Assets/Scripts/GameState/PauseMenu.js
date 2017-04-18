@@ -4,21 +4,29 @@ var paused : boolean;
 var myString : String = "Mute";
 var Mute : boolean;
 var guiSkin : GUISkin;
-  
+
+
+//Handles the actual pause function. Pauses the game if the escape key is pressed. 
+//Bugs: 
+// 1) Ball container "shifts" to the position it would be at if you hadn't paused after unpausing.
+// - Likely due to Cam using different time var for ball container, fix this with him to not break his implementation
+// 2) Fighter ship can fire once after the pause
+// - Also seems to be due to using different time var
 function Start () 
 {
   
 }
-
-// The actual pause function. Pauses the game if the escape key is pressed. 
-// Seems to work perfectly, except the ball container shifts position when unpaused.   
+   
 function Update () 
 {
+    //pauses when escape key is pressed
 	if(Input.GetKeyDown("escape"))
 	{
 		paused = !paused;
     }
 
+    //freezes game state when paused. 
+    //Cam isn't using Time.timescale for ball container, causing bug
 	if(paused)
 	{
 		Time.timeScale = 0;
@@ -27,8 +35,10 @@ function Update ()
     {
 		Time.timeScale = 1;
 	}
-  
-  /*  if(Mute == true)
+
+  /*
+  	//Mute implementation, will probably just remove this  
+  	if(Mute == true)
     {     
 		gameObject.GetComponent(AudioListener).enabled = false;   
     }
@@ -39,25 +49,25 @@ function Update ()
   */
 }
   
-// JavaScript
 var icon : Texture2D;
   
 // var frameStyle : GUIStyle;
 // sets GUI  
 function OnGUI () 
 {
+	//initializes GUIskin
 	GUI.skin = guiSkin;
-  
+
+	//initializes GUI buttons
     if(paused)
     { 
-		// GUI.Box (Rect (10,10, 100, 50), icon, frameStyle);
-		// Loads main menu (not implemented)
+    	//                       x position            y position      x-width y-width  text
 		if (GUI.Button (Rect (Screen.width/2 - 100,Screen.height/2 - 120, 200, 100), "Main Menu")) 
 		{
         	Application.LoadLevel("MainMenu");
             Time.timeScale = 1;
         }
-        // restarts game (not implemented)
+        // restarts game
         if (GUI.Button (Rect (Screen.width/2 - 100,Screen.height/2,200,100), "Restart Match")) 
         {
             Application.LoadLevel("test");

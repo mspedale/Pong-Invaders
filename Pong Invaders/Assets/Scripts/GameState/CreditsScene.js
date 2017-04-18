@@ -8,9 +8,11 @@ var menu : boolean;
 var guiSkin : GUISkin;
 var icon : Texture2D;
 
+
+//handles behavior of the Credits scene
 function Start()
 {
-    // initialize text
+    // initializes text, writes to screen 
     var tc = GetComponent(GUIText);
     creds = "Pong Invaders Credits:\n\n";
     creds += "BitJunkie is...\n\n";
@@ -72,6 +74,8 @@ function OnGUI ()
 {
 	GUI.skin = guiSkin;
 
+	//draws GUI buttons to screen
+	//***use screen.width and .height to draw appropriately at any resolution
 	if(menu)
 	{
 		if (GUI.Button (Rect (Screen.width/2 - 225, Screen.height/2 + 175, 90, 40), "Back")) 
