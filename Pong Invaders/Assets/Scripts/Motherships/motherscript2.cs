@@ -12,11 +12,12 @@ public class motherscript2 : MonoBehaviour
     
 	//audio
     AudioSource scoreSound;
-
+    public GameObject shieldObj;
     public GameObject ContainmentPrefab;
     int hp=10;
     bool shield=true;
-
+    GameObject shieldclone;
+    Vector3 position = new Vector3(0f,10.18f,0f);
     void OnTriggerEnter2D(Collider2D other)
 	{
         //handles HP if shield is down
@@ -36,9 +37,12 @@ public class motherscript2 : MonoBehaviour
 		{
             print("BallHit");
             shield=false;
+            //Destroy(shieldclone);
+            shieldclone.SetActive(false);
             print(shield);
             Destroy (other.gameObject);
             StartCoroutine(shieldDelay());
+            
         }
     }
 
@@ -48,6 +52,8 @@ public class motherscript2 : MonoBehaviour
 		
      yield return new WaitForSeconds(5);
      shield=true;
+     //GameObject shieldclone = Instantiate(shieldObj, position, Quaternion.identity) as GameObject;
+     shieldclone.SetActive(true);
      gameObject.GetComponent<AudioSource>().Play();
 	 GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity);
  	}
@@ -55,7 +61,7 @@ public class motherscript2 : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		
+        shieldclone  = Instantiate(shieldObj, position ,Quaternion.identity) as GameObject;
 	}
 	
 	// Update is called once per frame
