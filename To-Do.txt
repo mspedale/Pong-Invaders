@@ -4,7 +4,7 @@ Game Mechanic Additions (Essential)
 
 
 1. Player Damage
-	- Player paddles will have HP.
+	- Player paddles will have HP.  
 	- HP will decrease when shot by another player or space invader enemy.
 	- When HP is 0, paddle will temporarily destroy or deactivate. 
 
@@ -14,7 +14,7 @@ Game Mechanic Additions (Essential)
 		- The ball reflects off the space invaders, destroying them. The interaction is similar to wall interactions. X or Y 			  velocity is simply made negative.
 	c. Destroy upon contact with player projectile -- Done
 	d. Shoot their own projectiles
-		- They will shoot their own projectiles, unique from player projectiles.
+		- They will shoot their own projectiles, unique from player projectiles.  -- Done
 		- These projectiles damage players and their motherships (if the shield is down), but do not affect the ball.
 	e. Movement
 		- Similar to the original "Space Invaders," they will move horizontally from one side of the screen to the other, 
@@ -100,13 +100,14 @@ Completed Tasks
 	- Exit Game button for easy quitting
 	- Should have space for Pong Invaders and BitJunkie logos
 	
-6. Pause Menu - Functioning, needs revision (Matt)
+6. Pause Menu - Completed (Matt)
 	- Pause game when escape key is pressed
 	- Buttons to resume game, restart game, or return to main menu
 	- Currently two bugs: 
-		~Ball container shifts positions when unpaused
-		~Players can fire one shot during pause
+		~Ball container shifts positions when unpaused (Fixed)
+		~Players can fire one shot during pause (Fixed)
 		~Should be fixable by consolidating time variables (Time.time and Time.timescale)
+		-Fixed w/ local bools and if statements
 	
 7. How to Play Menu - Completed (Matt)
         - Accessible from Main Menu
