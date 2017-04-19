@@ -23,8 +23,8 @@ GameObject:
   - component: {fileID: 61138087824982516}
   - component: {fileID: 114806576899712478}
   m_Layer: 0
-  m_Name: InvaderProjectile2
-  m_TagString: Projectile_p2
+  m_Name: InvaderProjectile1
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

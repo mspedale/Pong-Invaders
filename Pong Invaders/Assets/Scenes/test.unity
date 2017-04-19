@@ -151,8 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e58e69f548684464990827277e8962b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerProjectile: {fileID: 1362647245297898, guid: 92139d82d9066c7408faf675c188134b,
-    type: 2}
 --- !u!82 &110854010
 AudioSource:
   m_ObjectHideFlags: 0
@@ -359,6 +357,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114853178948719260, guid: 9a8df9eeee96bfa458fd963416a5d960,
+        type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1516342981985476, guid: 67f62164a54b1db48967ec7fd78c27c9,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a8df9eeee96bfa458fd963416a5d960, type: 2}
   m_IsPrefabParent: 0
