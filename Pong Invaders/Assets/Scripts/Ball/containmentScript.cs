@@ -13,16 +13,18 @@ public class containmentScript : MonoBehaviour
 	public GameObject prefab_ball;
 	Rigidbody2D ballBody;
 	Rigidbody2D containment;
+	bool paused = false;
 	
 	// Oscillation variables
-	float amp =  6.5f;		// Amplitude of displacement
-	float freq = 0f;	// Frequency of oscillation  (increases with every shot fired)
-	float t = 0f;			// Time since oscillation began (in frames)
-	float x = 0f; 		// Current x position
-	float prevX = 0f;	// Previous x position
+	float amp =  6.5f;		                        // Amplitude of displacement
+	float freq = 0f;	                            // Frequency of oscillation  (increases with every shot fired)
+	float t = 0f;		                	        // Time since oscillation began (in frames)
+	float x = 0f; 		                            // Current x position
+	float prevX = 0f;	                            // Previous x position
 	Vector3 newPosition = new Vector3 (0f,0f,0f);	// Need a Vector3 for use with MovePosition()
-	int direction = 1;	// Indicates whether the containment is going right or left. Crucial for maintaining direction when frequency changes.
+	int direction = 1;	                            // Indicates whether the containment is going right or left. Crucial for maintaining direction when frequency changes.
 	// Make this ^^^^ -1 or 1 randomly!
+
 	
     //audio
     AudioSource hitSound;
@@ -45,14 +47,26 @@ public class containmentScript : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+		// pause detection
+		if (Input.GetKeyDown ("escape")) 
+		{
+			paused = !paused;
+			//Debug.Log ("paused = " + paused);
+		}
+			
+
 		//Movement oscillation based on HP
 		if(hp < maxHP) 
 		{
-			t += 1 * direction;
-			prevX = x;
-			x = amp * Mathf.Sin(2 * Mathf.PI * freq * t);
-			newPosition.x = x;
-			containment.MovePosition(newPosition);
+			// handles pausing the container properly
+			if (paused == false) 
+			{
+				t += 1 * direction;
+				prevX = x;
+				x = amp * Mathf.Sin (2 * Mathf.PI * freq * t);
+				newPosition.x = x;
+				containment.MovePosition (newPosition);
+			}
 		}
 	}
 	

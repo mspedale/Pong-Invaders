@@ -9,9 +9,9 @@ var guiSkin : GUISkin;
 //Handles the actual pause function. Pauses the game if the escape key is pressed. 
 //Bugs: 
 // 1) Ball container "shifts" to the position it would be at if you hadn't paused after unpausing.
-// - Likely due to Cam using different time var for ball container, fix this with him to not break his implementation
+// - Fixed (Matt)
 // 2) Fighter ship can fire once after the pause
-// - Also seems to be due to using different time var
+// - Fixed (Matt)
 function Start () 
 {
   
