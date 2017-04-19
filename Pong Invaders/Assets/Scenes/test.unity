@@ -425,9 +425,9 @@ Camera:
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.24
+    x: 0
     y: 0
-    width: 0.57
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
@@ -648,7 +648,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1746346902
+  randomSeed: 1876172327
   InitialModule:
     serializedVersion: 3
     enabled: 1
