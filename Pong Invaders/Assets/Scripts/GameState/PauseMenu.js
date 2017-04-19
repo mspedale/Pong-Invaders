@@ -80,11 +80,13 @@ function OnGUI ()
             {
             	myString = "Unmute";
             	Mute = true;
+            	AudioListener.volume = 0;
             }
 			else
 			{
         		myString = "Mute";
-          		Mute = false;
+        		Mute = false;
+        		AudioListener.volume = 1;
           	}
         }
 	}

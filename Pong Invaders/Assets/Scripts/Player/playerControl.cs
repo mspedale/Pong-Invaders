@@ -13,6 +13,7 @@ public class playerControl : MonoBehaviour
 	int hp=10;
     bool mov = true;
 
+
 	// Use this for initialization
 	void Start ()
     {
