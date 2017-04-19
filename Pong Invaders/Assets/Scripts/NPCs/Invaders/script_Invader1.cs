@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,16 +6,24 @@ using UnityEngine;
 //Handles the "Space Invaders" enemies
 public class script_Invader1 : MonoBehaviour 
 {
-
+    public GameObject projectile;
+    GameObject projectileClone;
+    float t;
 	// Use this for initialization
 	void Start () 
 	{
-		
+		t = Random.Range(0f, 3f);
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+    //fire weapons
+     if (Time.time - t > 3)
+			{
+    StartCoroutine(shoot());
+    t = Time.time;  
+    }
 		
 	}
 	
@@ -43,5 +51,11 @@ public class script_Invader1 : MonoBehaviour
 		}
 		*/
 	}
+    IEnumerator shoot() //more firing
+    {
+        yield return new WaitForSeconds (3);
+        projectileClone = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+        Destroy(projectileClone, 3);
+    }
 	
 }
