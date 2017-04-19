@@ -41,7 +41,7 @@ public class playerControl2 : MonoBehaviour
 	void OnTriggerEnter2D(Collider2D coll) 
 	{
 
-		if(coll.gameObject.name == "playerProjectile(Clone)") 
+		if(coll.gameObject.name == "playerProjectile(Clone)" || coll.gameObject.name == "InvaderProjectile2") 
 		{
 			hp--;
 		}
