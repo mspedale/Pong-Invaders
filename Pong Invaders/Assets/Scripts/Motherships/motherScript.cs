@@ -7,18 +7,22 @@ using UnityEngine;
 //mothership has a shield that is disabled by the ball,
 //and health that is lowered by damage from fighter ship weapons.
 //once the mothership health reaches zero, the ship is destroyed and the round ends.
+
+
 public class motherScript : MonoBehaviour 
 {
 	
     //audio
     AudioSource scoreSound;
-
+    public GameObject shieldObj;
     public GameObject ContainmentPrefab;
     int hp=10;
     bool shield=true;
-
+    GameObject shieldclone;
+    Vector3 position = new Vector3(0f,-10.18f,0f);
     void OnTriggerEnter2D(Collider2D other)
 	{
+    
         //handles HP if shield is down
         if(shield==false)
 		{
@@ -36,6 +40,8 @@ public class motherScript : MonoBehaviour
 		{
             print("BallHit");
             shield=false;
+            shieldclone.SetActive(false);
+            //Destroy(shieldclone);
             print(shield);
             Destroy (other.gameObject);
             StartCoroutine(shieldDelay());
@@ -48,6 +54,8 @@ public class motherScript : MonoBehaviour
 		
      yield return new WaitForSeconds(5);
      shield=true;
+     shieldclone.SetActive(true);
+     //GameObject shieldclone = Instantiate(shieldObj, position, Quaternion.identity) as GameObject;
      gameObject.GetComponent<AudioSource>().Play();
      GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity);
  	}
@@ -55,7 +63,7 @@ public class motherScript : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-		
+     shieldclone  = Instantiate(shieldObj, position ,Quaternion.identity) as GameObject;
 	}
 	
 	// Update is called once per frame
