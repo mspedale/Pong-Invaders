@@ -33,7 +33,8 @@ public class script_InvaderFleet1 : MonoBehaviour {
 			// If not:
 			StepX();
 			
-			// X movement
+			// X movement (killing compile)
+            /*
 			if (currentPosition.x * xDir < newPosition.x * xDir) 
 			{
 				fleetRB.velocity.x = stepSpeed * xDir;	
@@ -56,6 +57,7 @@ public class script_InvaderFleet1 : MonoBehaviour {
 				fleetRB.transform.position.y = newPosition.y;
 				restTime = maxRest;
 			}	
+            */
 		}
 		else
 		{
