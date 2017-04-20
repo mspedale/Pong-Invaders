@@ -49,7 +49,7 @@ function Update ()
   */
 }
   
-var icon : Texture2D;
+//var icon : Texture2D;
   
 // var frameStyle : GUIStyle;
 // sets GUI  
@@ -62,15 +62,15 @@ function OnGUI ()
     if(paused)
     { 
     	//                       x position            y position      x-width y-width  text
-		if (GUI.Button (Rect (Screen.width/2 - 100,Screen.height/2 - 120, 200, 100), "Main Menu")) 
+		if (GUI.Button (Rect (Screen.width/2 - 100,Screen.height/2 - 120, 200, 100), "Restart Match")) 
 		{
-        	Application.LoadLevel("MainMenu");
+        	Application.LoadLevel("test");
             Time.timeScale = 1;
         }
         // restarts game
-        if (GUI.Button (Rect (Screen.width/2 - 100,Screen.height/2,200,100), "Restart Match")) 
+        if (GUI.Button (Rect (Screen.width/2 - 100,Screen.height/2,200,100), "Main Menu")) 
         {
-            Application.LoadLevel("test");
+            Application.LoadLevel("MainMenu");
             Time.timeScale = 1;
         }
         // mutes / unmutes game (not implemented)
