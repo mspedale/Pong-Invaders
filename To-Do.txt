@@ -26,15 +26,6 @@ Game Mechanic Additions (Essential)
         - Standardize sounds for a more unified design (similar cuttoffs, lengths, etc.)
         - Work on array function for randomizing sound to avoid redundancy on effects that repeat often (ball collision, laser, etc)
         - (Implemented comment for this in ballscript, test later)
-	
-4. End State
-	- Game needs to have a definite end. Can be handled one of two ways:
-		a) When a player's mothership is destroyed, the game ends. The surviving player wins.
-		b) When a player's mothership is destroyed, the round ends. The surviving player is awarded a point,
-		   and the game ends when one player reaches a certain number of points. The first player to score
-		   that amount of points wins.
-	- Upon the game ending, a menu should appear that allows the player to start another game, exit to the main menu,
-	  or exit the game completely.
 
 
 ------------------------------------
@@ -113,4 +104,13 @@ Completed Tasks
         - Accessible from Main Menu
 	- Should teach players how the game works without too much information
 	- Contains functionality to add more pages if needed
+	
+8. End State - Completed (Matt)
+	- Game needs to have a definite end. Can be handled one of two ways:
+		a) When a player's mothership is destroyed, the game ends. The surviving player wins. -- This is what we went with
+		b) When a player's mothership is destroyed, the round ends. The surviving player is awarded a point,
+		   and the game ends when one player reaches a certain number of points. The first player to score
+		   that amount of points wins.
+	- Upon the game ending, a menu should appear that allows the player to start another game, exit to the main menu,
+	  or exit the game completely.
 	
