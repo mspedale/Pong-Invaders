@@ -9,6 +9,7 @@ public class script_Invader1 : MonoBehaviour
     public GameObject projectile;
     GameObject projectileClone;
     float t;
+    Vector3 newPosition;
 	// Use this for initialization
 	void Start () 
 	{
@@ -19,12 +20,19 @@ public class script_Invader1 : MonoBehaviour
 	void Update () 
 	{
     //fire weapons
-     if (Time.time - t > 3)
+     newPosition = transform.position;
+    Vector3 eps = new Vector3(0f,-.05f,0f);
+    newPosition = newPosition + eps;
+    
+    RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, Vector2.down); //raycast THROUGH the object and return an array of hits
+    if(hit[1].transform.gameObject.name!="obj_Invader1") //If the first thing it hits that isn't itself's name is "obj_Invader1"
+        {
+        if (Time.time - t > 3f)
 			{
-    StartCoroutine(shoot());
-    t = Time.time;  
-    }
-		
+                StartCoroutine(shoot());
+                t = Time.time;  
+            }
+		}
 	}
 	
 	void OnTriggerEnter2D(Collider2D coll)
@@ -54,7 +62,7 @@ public class script_Invader1 : MonoBehaviour
     IEnumerator shoot() //more firing
     {
         yield return new WaitForSeconds (3);
-        projectileClone = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+        projectileClone = Instantiate(projectile, newPosition, Quaternion.identity) as GameObject;
         Destroy(projectileClone, 3);
     }
 	
