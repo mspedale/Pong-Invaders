@@ -31,7 +31,8 @@ public class motherScript : MonoBehaviour
         
 			if(hp<1)
 			{
-            Destroy (gameObject);
+				Application.LoadLevel("P2Win");
+            	//Destroy (gameObject);
 			}
         }
 
