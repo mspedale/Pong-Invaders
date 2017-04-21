@@ -280,8 +280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e58e69f548684464990827277e8962b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerProjectile: {fileID: 1362647245297898, guid: 92139d82d9066c7408faf675c188134b,
-    type: 2}
 --- !u!82 &110854010
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3872,9 +3870,10 @@ MonoBehaviour:
   fleetRB: {fileID: 0}
   stepSpeed: 0.5
   xDir: 1
-  stepXsize: 0.25
+  stepXsize: 0.5
   stepYsize: 0.5
   maxRest: 60
+  restTime: 60
 --- !u!1 &609637559
 GameObject:
   m_ObjectHideFlags: 0

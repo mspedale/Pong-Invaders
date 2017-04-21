@@ -6,13 +6,13 @@ public class script_InvaderFleet1 : MonoBehaviour {
 	
 	public Rigidbody2D fleetRB;
 	
-	public float stepSpeed = 0.5f;
+	public float stepSpeed = 1.25f;
 	public int xDir = 1;
-	public float stepXsize = 0.25f;
+	public float stepXsize = 0.75f;
 	float stepX = 0f;
 	public float stepYsize = 0.5f;
 	public int maxRest = 60;
-	public int restTime = 60;  // private
+	private int restTime = 60;
 	Vector2 currentPosition = new Vector2(0f,0f);
 	Vector2 newPosition = new Vector2(0f,0f);
 	Vector2 newVelocity = new Vector2(0f,0f);
@@ -38,12 +38,17 @@ public class script_InvaderFleet1 : MonoBehaviour {
 			if(restTime+1 > 0) 
 			{
 				// If-statement for determining whether next step will run into a wall
+					// First, need to determine which space invader is farthest to the right if xDir=1, or to the left if xDir = -1
+						// Try http://answers.unity3d.com/questions/594210/get-all-children-gameobjects.html
+						// or https://docs.unity3d.com/ScriptReference/Component.GetComponentsInChildren.html
+					// Next, need to raycast at (stepXsize + half invader size)  to determine whether another step will cause a collision.
+						// try Collider2D.Raycast()?
 				// If it does, make xDir *= -1, and do a StepY
-				// If not:
-				//StepX();
-				print("StepX");
-				destination.y = currentPosition.y;
-				destination.x = currentPosition.x + stepXsize * xDir;
+				// else: 
+					//StepX
+					print("StepX");
+					destination.y = currentPosition.y;
+					destination.x = currentPosition.x + stepXsize * xDir;
 				
 				restTime--;
 			}
@@ -86,13 +91,6 @@ public class script_InvaderFleet1 : MonoBehaviour {
 		fleetRB.transform.position = newPosition;
 		fleetRB.velocity = newVelocity;
 	}
-	
-	/*
-	void StepX () {
-		destination.y = currentPosition.y;
-		destination.x = currentPosition.x + stepXsize * xDir;
-	}
-	*/
 	
 	void StepY () {
 		destination.y = currentPosition.y - stepYsize;  // change to "+ stepYsize" for InvaderFleet 2
