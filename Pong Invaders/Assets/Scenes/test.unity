@@ -3868,12 +3868,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fleetRB: {fileID: 0}
-  stepSpeed: 0.5
+  stepSpeed: 1.25
   xDir: 1
-  stepXsize: 0.5
-  stepYsize: 0.5
+  stepXsize: 0.75
+  stepYsize: 0.75
   maxRest: 60
-  restTime: 60
 --- !u!1 &609637559
 GameObject:
   m_ObjectHideFlags: 0
