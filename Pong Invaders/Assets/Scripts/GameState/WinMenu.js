@@ -37,7 +37,8 @@ function OnGUI ()
     if(win)
     { 
 
-    	GUI.Label(Rect (Screen.width/2 - 50, Screen.height/2 - 200, 200, 100), "Player 2 Wins!");
+        // I'll make a GIMP font instead like the How To screens
+    	//GUI.Label(Rect (Screen.width/2 - 50, Screen.height/2 - 200, 200, 100), "Player 2 Wins!");
     	
     	//                       x position            y position      x-width y-width  text
 		if (GUI.Button (Rect (Screen.width/2 - 100,Screen.height/2 - 120, 200, 100), "Restart Match")) 

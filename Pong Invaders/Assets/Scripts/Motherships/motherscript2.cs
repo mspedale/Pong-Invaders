@@ -37,8 +37,9 @@ public class motherscript2 : MonoBehaviour
 
             if (hp<1)
 			{
-                Destroy (gameObject);
-			}
+                Application.LoadLevel("P1Win");
+                //Destroy (gameObject);
+            }
         }
 
 		//handles shield if ball hits mothership
