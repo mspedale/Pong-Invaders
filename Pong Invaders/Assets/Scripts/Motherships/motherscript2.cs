@@ -68,6 +68,7 @@ public class motherscript2 : MonoBehaviour
     public void setHealthBar(float myHealth)
     {
         healthBar.transform.localScale = new Vector3(myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+        healthBar.transform.position = new Vector3(healthBar.transform.position.x - 0.15f, healthBar.transform.position.y, healthBar.transform.position.z);
     }
 
     //regens shield over time
