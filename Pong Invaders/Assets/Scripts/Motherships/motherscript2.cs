@@ -9,9 +9,13 @@ using UnityEngine;
 //once the mothership health reaches zero, the ship is destroyed and the round ends.
 public class motherscript2 : MonoBehaviour
 {
-    
-	//audio
-    AudioSource scoreSound;
+
+    //audio
+    AudioSource shielddisable;
+    AudioSource shiphit;
+    AudioSource shieldenable;
+    //AudioSource shipdestroyed;
+
     public GameObject shieldObj;
     public GameObject ContainmentPrefab;
     int hp=10;
@@ -25,10 +29,11 @@ public class motherscript2 : MonoBehaviour
 		{
             print(hp);
         	hp=hp-1;
+            shiphit.Play();
 
-			if(hp<1)
+            if (hp<1)
 			{
-            Destroy (gameObject);
+                Destroy (gameObject);
 			}
         }
 
@@ -42,7 +47,8 @@ public class motherscript2 : MonoBehaviour
             print(shield);
             Destroy (other.gameObject);
             StartCoroutine(shieldDelay());
-            
+            shielddisable.Play();
+
         }
     }
 
@@ -50,22 +56,30 @@ public class motherscript2 : MonoBehaviour
     IEnumerator shieldDelay() 
 	{
 		
-     yield return new WaitForSeconds(5);
-     shield=true;
-     //GameObject shieldclone = Instantiate(shieldObj, position, Quaternion.identity) as GameObject;
-     shieldclone.SetActive(true);
-     gameObject.GetComponent<AudioSource>().Play();
-	 GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity);
- 	}
+        yield return new WaitForSeconds(5);
+        shield=true;
+        //GameObject shieldclone = Instantiate(shieldObj, position, Quaternion.identity) as GameObject;
+        shieldclone.SetActive(true);
+        gameObject.GetComponent<AudioSource>().Play();
+	    GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity);
+        shieldenable.Play();
+    }
 
 	// Use this for initialization
 	void Start () 
 	{
         shieldclone  = Instantiate(shieldObj, position ,Quaternion.identity) as GameObject;
-	}
-	
-	// Update is called once per frame
-	void Update () 
+
+        //audio
+        AudioSource[] audio = GetComponents<AudioSource>();
+        shielddisable = audio[0];
+        shiphit = audio[1];
+        shieldenable = audio[2];
+        //shipdestroyed = audio[3];
+    }
+
+    // Update is called once per frame
+    void Update () 
 	{
 		
 	}
