@@ -763,8 +763,8 @@ MonoBehaviour:
   obj_player: {fileID: 1891326142608428, guid: cb04f3430d3fe174a84e417d5d04a903, type: 2}
   obj_player2: {fileID: 1568278455851976, guid: 59d03557a514af643809192b3f9bf967,
     type: 2}
-  reflectionAngle: 135
-  deadZone: 0
+  reflectionAngle: 125
+  deadZone: 3
   colSound: {fileID: 0}
 --- !u!114 &114978177683978932
 MonoBehaviour:
