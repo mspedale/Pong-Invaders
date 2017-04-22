@@ -10,10 +10,13 @@ public class containmentScript : MonoBehaviour
 	int maxHP;
 	int hp;
 	float ballForce = 500f;
+    bool paused = false;
+	
 	public GameObject prefab_ball;
-	Rigidbody2D ballBody;
+    public GameObject invader;
+
+    Rigidbody2D ballBody;
 	Rigidbody2D containment;
-	bool paused = false;
 	
 	// Oscillation variables
 	float amp =  6.5f;		                        // Amplitude of displacement
@@ -42,7 +45,9 @@ public class containmentScript : MonoBehaviour
 		maxHP = 5; //rand.Next(6,12); (testing health)
 		hp = maxHP;
 		containment = gameObject.GetComponent<Rigidbody2D>();
-	}
+
+        Instantiate(invader, new Vector2(0, 3), Quaternion.identity);
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -106,7 +111,7 @@ public class containmentScript : MonoBehaviour
 
                 prefab_ball.SetActive(true);
 				prefab_ball.transform.SetParent(null);
-				prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-150.0f, 150.0f),ballForce));
+                prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-150.0f, 150.0f), ballForce));
 				Destroy (gameObject);
 			}
 			

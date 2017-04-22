@@ -28,6 +28,7 @@ GameObject:
   - component: {fileID: 82361779942941064}
   - component: {fileID: 198320667811112262}
   - component: {fileID: 199456711215037938}
+  - component: {fileID: 114978177683978932}
   m_Layer: 0
   m_Name: Containment
   m_TagString: Untagged
@@ -66,7 +67,7 @@ Transform:
   m_GameObject: {fileID: 1044002250130482}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1.7392036}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children:
   - {fileID: 4311867518220852}
   m_Father: {fileID: 0}
@@ -747,6 +748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab_ball: {fileID: 1297867710284142}
+  invader: {fileID: 1382185468810062, guid: 40fd56f8c688bfe44b7c8a79b04f58af, type: 2}
 --- !u!114 &114835971924492704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -764,6 +766,21 @@ MonoBehaviour:
   reflectionAngle: 135
   deadZone: 0
   colSound: {fileID: 0}
+--- !u!114 &114978177683978932
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044002250130482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b4979b186b41741829e85803900327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  myString: Mute
+  Mute: 0
+  guiSkin: {fileID: 0}
 --- !u!198 &198320667811112262
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -819,7 +836,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1245602868
+  randomSeed: 1213814103
   InitialModule:
     serializedVersion: 3
     enabled: 1

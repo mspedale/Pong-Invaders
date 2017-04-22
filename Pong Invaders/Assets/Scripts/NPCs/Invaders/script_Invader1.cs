@@ -10,6 +10,7 @@ public class script_Invader1 : MonoBehaviour
     GameObject projectileClone;
     float t;
     Vector3 newPosition;
+
 	// Use this for initialization
 	void Start () 
 	{
@@ -59,6 +60,7 @@ public class script_Invader1 : MonoBehaviour
 		}
 		*/
 	}
+
     IEnumerator shoot() //more firing
     {
         yield return new WaitForSeconds (3);
