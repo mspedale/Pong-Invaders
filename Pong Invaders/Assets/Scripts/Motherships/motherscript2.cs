@@ -22,6 +22,7 @@ public class motherscript2 : MonoBehaviour
     bool shield=true;
     GameObject shieldclone;
     Vector3 position = new Vector3(0f,10.18f,0f);
+
     void OnTriggerEnter2D(Collider2D other)
 	{
         //handles HP if shield is down
@@ -60,7 +61,6 @@ public class motherscript2 : MonoBehaviour
         shield=true;
         //GameObject shieldclone = Instantiate(shieldObj, position, Quaternion.identity) as GameObject;
         shieldclone.SetActive(true);
-        gameObject.GetComponent<AudioSource>().Play();
 	    GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity);
         shieldenable.Play();
     }
