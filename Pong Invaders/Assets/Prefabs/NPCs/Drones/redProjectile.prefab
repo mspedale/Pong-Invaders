@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4794838179500100}
   - component: {fileID: 212205246464288082}
   - component: {fileID: 61709857648742172}
-  - component: {fileID: 114455275970621812}
+  - component: {fileID: 114069201161591026}
   m_Layer: 0
   m_Name: redProjectile
   m_TagString: Untagged
@@ -67,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.99999994}
   m_EdgeRadius: 0
---- !u!114 &114455275970621812
+--- !u!114 &114069201161591026
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -75,11 +75,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1988776380961004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a63ea6a35165341b6d26462c64461c, type: 3}
+  m_Script: {fileID: 11500000, guid: c5553ef0fc3e6414d9ac982c688c8cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
-  direction: -1
+  speed: 0.5
 --- !u!212 &212205246464288082
 SpriteRenderer:
   m_ObjectHideFlags: 1

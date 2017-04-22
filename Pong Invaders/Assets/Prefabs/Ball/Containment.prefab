@@ -42,12 +42,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4311867518220852}
   - component: {fileID: 212763928357013614}
-  - component: {fileID: 61125327377842388}
   - component: {fileID: 114835971924492704}
   - component: {fileID: 50771042451597236}
   - component: {fileID: 82914276736400526}
   - component: {fileID: 82472397351083956}
   - component: {fileID: 82537863266598072}
+  - component: {fileID: 58059128993416010}
   m_Layer: 0
   m_Name: prefab_ball
   m_TagString: Ball
@@ -122,8 +122,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!61 &61125327377842388
-BoxCollider2D:
+--- !u!58 &58059128993416010
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -133,9 +133,10 @@ BoxCollider2D:
   m_Material: {fileID: 6200000, guid: 3d61d36fbbf0b734690d9d840b74d470, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Radius: 0.58
 --- !u!61 &61633214776828262
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -147,9 +148,20 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 0.8663797, y: 0.49993357}
+  m_EdgeRadius: 0
 --- !u!82 &82349408321534430
 AudioSource:
   m_ObjectHideFlags: 1
@@ -689,11 +701,16 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 269c094951d6e1a409d4a6d915b42d61, type: 3}
   m_Color: {r: 0.73629797, g: 0.5210856, b: 0.89705884, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
 --- !u!212 &212763928357013614
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -724,8 +741,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c78afa973b7bc3545acecfd6aced15f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab68eba844c1bdf45be1dfbf05fab054, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0

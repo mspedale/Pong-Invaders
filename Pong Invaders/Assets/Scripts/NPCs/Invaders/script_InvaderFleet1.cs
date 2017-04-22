@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -46,7 +46,7 @@ public class script_InvaderFleet1 : MonoBehaviour {
 				// If it does, make xDir *= -1, and do a StepY
 				// else: 
 					//StepX
-					print("StepX");
+					//print("StepX");
 					destination.y = currentPosition.y;
 					destination.x = currentPosition.x + stepXsize * xDir;
 				
@@ -64,7 +64,7 @@ public class script_InvaderFleet1 : MonoBehaviour {
 				newPosition.x = destination.x;
 				restTime = maxRest;	
 				
-				print("X Destination reached");
+				//print("X Destination reached");
 			}
 				
 			// Y movement
@@ -78,7 +78,7 @@ public class script_InvaderFleet1 : MonoBehaviour {
 				newPosition.y = destination.y;
 				// restTime = maxRest;	
 				
-				print("Y Destination reached");
+				//print("Y Destination reached");
 			}	
 		}
 		// At rest

@@ -1,15 +1,12 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: b435af8aa181b9a41914e3be6bae613f
-timeCreated: 1490080862
-=======
-guid: a838b8625180c054a9b9122bd6ba9ba7
-timeCreated: 1490080982
->>>>>>> fe87607c0bc1a7f1b298ff46b9f3a9382884908f
+timeCreated: 1492885972
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerProjectile: {fileID: 1362647245297898, guid: 92139d82d9066c7408faf675c188134b,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

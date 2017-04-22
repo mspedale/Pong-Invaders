@@ -43,7 +43,7 @@ public class playerControl : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll) 
 	{
-		if (coll.gameObject.name == "playerProjectile2(Clone)" || coll.gameObject.name == "InvaderProjectile1")
+		if (coll.gameObject.name == "playerProjectile2(Clone)" || coll.gameObject.name == "InvaderProjectile1(Clone)" || coll.gameObject.name == "redProjectile(Clone)")
 		{
 			hp--;
 		}
