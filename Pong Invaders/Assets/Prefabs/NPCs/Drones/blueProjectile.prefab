@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 212526075717824688}
   - component: {fileID: 61126184083593164}
   - component: {fileID: 114721097281194972}
-  - component: {fileID: 114439208070313746}
   m_Layer: 0
   m_Name: blueProjectile
   m_TagString: Untagged
@@ -68,19 +67,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.99999994}
   m_EdgeRadius: 0
---- !u!114 &114439208070313746
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1590861412411782}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7102c2ccc0e6df44aa63ca033f51cfec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.2
-  direction: 1
 --- !u!114 &114721097281194972
 MonoBehaviour:
   m_ObjectHideFlags: 1

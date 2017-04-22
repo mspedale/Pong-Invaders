@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4001449049125766}
   - component: {fileID: 212543070065456318}
-  - component: {fileID: 114099633253215644}
   - component: {fileID: 61115548280885264}
   - component: {fileID: 50112844499528346}
+  - component: {fileID: 114975579516963902}
   m_Layer: 0
   m_Name: redDrone
   m_TagString: Untagged
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &114099633253215644
+--- !u!114 &114975579516963902
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1121235759836884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da59e8c442cf19e44ae8423711ecf648, type: 3}
+  m_Script: {fileID: 11500000, guid: eab0863a84d007840b1731f895414daf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1988776380961004, guid: 4997f8238b5fcc9439530da0ee047b6e, type: 2}

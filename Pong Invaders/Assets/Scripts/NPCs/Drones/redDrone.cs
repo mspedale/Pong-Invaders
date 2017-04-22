@@ -35,7 +35,7 @@ public class redDrone : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll)
 	{
 		//destroys invader if it is hit by the fighter ship projectile
-		if (coll.gameObject.tag == "Projectile_p2" || coll.gameObject.name=="InvaderProjectile1" || coll.gameObject.name == "blueProjectile") 
+		if (coll.gameObject.tag == "Projectile_p1" || coll.gameObject.name=="InvaderProjectile1(Clone)" || coll.gameObject.name == "blueProjectile(Clone)") 
 		{
 			Destroy (gameObject);
 		}
