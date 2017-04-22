@@ -67,13 +67,14 @@ public class motherScript : MonoBehaviour
     }
     */
 
+    // method that decreases HP on hit for the health bar
     protected void decreaseHealth()
     {
         float calc_Health = hp / 10f;
         setHealthBar(calc_Health);
     }
 
-
+    // changes the size of the HP bar
     public void setHealthBar(float myHealth)
     {
         healthBar.transform.localScale = new Vector3(myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
