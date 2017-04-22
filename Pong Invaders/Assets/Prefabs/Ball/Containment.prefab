@@ -749,6 +749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab_ball: {fileID: 1297867710284142}
   invader: {fileID: 1382185468810062, guid: 40fd56f8c688bfe44b7c8a79b04f58af, type: 2}
+  invader2: {fileID: 1859009132640742, guid: d05caab82acb6544c8387f2b549568d7, type: 2}
 --- !u!114 &114835971924492704
 MonoBehaviour:
   m_ObjectHideFlags: 1
