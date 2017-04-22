@@ -131,16 +131,19 @@ public class ballScript : MonoBehaviour
 
 			float newDirection = (180-reflectionAngle)/2 + reflectionAngle*contactNormal;
 			float newDirectionRadians = newDirection * Mathf.PI/180;
-			float newX = Mathf.Cos(newDirectionRadians)*Mathf.Abs(currentVelocity);
+			//float newX = Mathf.Cos(newDirectionRadians)*Mathf.Abs(currentVelocity);
+            float newX=0;
 			float newY = 0;
 
 			if (coll.gameObject.name == "obj_player") 
 			{
-				newY = Mathf.Sin (newDirectionRadians) * Mathf.Abs (currentVelocity + 0.05f);
+				newY = -Mathf.Sin (newDirectionRadians) * Mathf.Abs (currentVelocity + 0.05f);
+                newX = -Mathf.Cos(newDirectionRadians)*Mathf.Abs(currentVelocity);
 			} 
 			else if (coll.gameObject.name == "obj_player2") 
 			{
-				newY = -Mathf.Sin (newDirectionRadians) * Mathf.Abs (currentVelocity + 0.05f);
+				newY = Mathf.Sin (newDirectionRadians) * Mathf.Abs (currentVelocity + 0.05f);
+                newX = -Mathf.Cos(newDirectionRadians)*Mathf.Abs(currentVelocity);
 			}
 
 			if (!inDeadzone) 
