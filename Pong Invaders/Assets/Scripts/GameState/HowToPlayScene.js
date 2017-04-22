@@ -27,12 +27,12 @@ function OnGUI ()
     if(menu)
     {
     	//                       x position            y position      x-width y-width  text
-        if (GUI.Button (Rect (Screen.width/2 - 150, Screen.height/2 + 250, 100, 50), "Back")) 
+        if (GUI.Button (Rect (Screen.width/2.8, Screen.height/1.2, 100, 50), "Back")) 
         {
             Application.LoadLevel("MainMenu");
         }
 
-        if (GUI.Button (Rect (Screen.width/2 + 35, Screen.height/2 + 250, 100, 50), "Next")) 
+        if (GUI.Button (Rect (Screen.width/1.83, Screen.height/1.2, 100, 50), "Next")) 
         {
             Application.LoadLevel("HowToPlay2");
         }
