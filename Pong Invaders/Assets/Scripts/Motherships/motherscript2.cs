@@ -18,6 +18,8 @@ public class motherscript2 : MonoBehaviour
 
     public GameObject shieldObj;
     public GameObject ContainmentPrefab;
+    public GameObject healthBar;
+
     int hp=10;
     bool shield=true;
     GameObject shieldclone;
@@ -30,6 +32,7 @@ public class motherscript2 : MonoBehaviour
 		{
             print(hp);
         	hp=hp-1;
+            decreaseHealth();
             shiphit.Play();
 
             if (hp<1)
@@ -53,7 +56,19 @@ public class motherscript2 : MonoBehaviour
         }
     }
 
-	//regens shield over time
+    protected void decreaseHealth()
+    {
+        float calc_Health = hp / 10f;
+        setHealthBar(calc_Health);
+    }
+
+
+    public void setHealthBar(float myHealth)
+    {
+        healthBar.transform.localScale = new Vector3(myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+    }
+
+    //regens shield over time
     IEnumerator shieldDelay() 
 	{
 		

@@ -46,7 +46,7 @@ public class script_Invader1 : MonoBehaviour
 	
 	void OnCollisionEnter2D(Collision2D coll) 
 	{
-		//destroys the ball if an invader runs into it
+		//destroys the invader if the ball runs into it
 		if (coll.gameObject.tag == "Ball")
 		{
 			Destroy (gameObject);

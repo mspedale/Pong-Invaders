@@ -20,8 +20,7 @@ Game Mechanic Additions (Essential)
         - Standardize sounds for a more unified design (similar cuttoffs, lengths, etc.)
         - Work on array function for randomizing sound to avoid redundancy on effects that repeat often (ball collision, laser, etc)
         - (Implemented comment for this in ballscript, test later)
-	- Still need sounds for: Invaders (movement, lasers, destruction), Motherships (damage, destruction, shield enable/disable),
-	  sound for when fighter ship is disabled
+	- Still need sounds for: sound for when fighter ship is disabled.
 
 
 ------------------------------------
