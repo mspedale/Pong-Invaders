@@ -21,6 +21,8 @@ public class motherScript : MonoBehaviour
 
     public GameObject shieldObj;
     public GameObject ContainmentPrefab;
+    public GameObject healthBar;
+
     int hp=10;
     bool shield=true;
     GameObject shieldclone;
@@ -34,6 +36,7 @@ public class motherScript : MonoBehaviour
 		{
             print(hp);
         	hp=hp-1;
+            decreaseHealth();
             shiphit.Play();
         
 			if(hp<1)
@@ -57,7 +60,26 @@ public class motherScript : MonoBehaviour
         }
     }
 
-	//regens shield over time
+    /*
+    void OnGUI()   for text HP display
+    {
+        GUI.Label(new Rect(Screen.width - 500, Screen.height - 50, Screen.width, Screen.height), "TEST TEST TEST");
+    }
+    */
+
+    protected void decreaseHealth()
+    {
+        float calc_Health = hp / 10f;
+        setHealthBar(calc_Health);
+    }
+
+
+    public void setHealthBar(float myHealth)
+    {
+        healthBar.transform.localScale = new Vector3(myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+    }
+
+    //regens shield over time
     IEnumerator shieldDelay() 
 	{
 		
