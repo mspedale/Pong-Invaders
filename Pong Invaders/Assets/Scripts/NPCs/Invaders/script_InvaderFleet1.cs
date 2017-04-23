@@ -18,6 +18,8 @@ public class script_InvaderFleet1 : MonoBehaviour {
 	Vector2 newVelocity = new Vector2(0f,0f);
 	Vector2 destination = new Vector2(0f,0f);
 	
+	private static Transform[] childTransform;
+	
 	void Start () {
 		fleetRB = GetComponent<Rigidbody2D>();
 		currentPosition = fleetRB.transform.position;
@@ -35,7 +37,7 @@ public class script_InvaderFleet1 : MonoBehaviour {
 		if (restTime <= 0)
 		{
 			// X and Y steps
-			if(restTime+1 > 0) 
+			if(restTime+1 > 0) // if restTime reached 0 in THIS frame
 			{
 				// If-statement for determining whether next step will run into a wall
 					// First, need to determine which space invader is farthest to the right if xDir=1, or to the left if xDir = -1
@@ -43,6 +45,20 @@ public class script_InvaderFleet1 : MonoBehaviour {
 						// or https://docs.unity3d.com/ScriptReference/Component.GetComponentsInChildren.html
 					// Next, need to raycast at (stepXsize + half invader size)  to determine whether another step will cause a collision.
 						// try Collider2D.Raycast()?
+				childTransform = GetComponentsInChildren<Transform>(false);
+				Vector2 curPosition = new Vector2(0f,0f);
+				float outermostX = 0;		// used to record the x-position of the outermost invaders
+				// For-loop determines the x-position of the farthest Invader
+				for (int i = 0; i < childTransform.Length; i++) { 
+					curPosition= childTransform[i].position;
+					if (curPosition.x * xDir > outermostX * xDir) {
+						outermostX = curPosition.x;
+					}
+				}
+				print(outermostX);
+				
+				
+				
 				// If it does, make xDir *= -1, and do a StepY
 				// else: 
 					//StepX
@@ -50,7 +66,7 @@ public class script_InvaderFleet1 : MonoBehaviour {
 					destination.y = currentPosition.y;
 					destination.x = currentPosition.x + stepXsize * xDir;
 				
-				restTime--;
+				restTime--;	// Decrement restTime so this if-statement doesn't get called indefinitely
 			}
 			
 			// X movement
