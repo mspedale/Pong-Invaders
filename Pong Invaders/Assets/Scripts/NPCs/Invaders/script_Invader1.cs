@@ -26,7 +26,9 @@ public class script_Invader1 : MonoBehaviour
     newPosition = newPosition + eps;
     
     RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, Vector2.down); //raycast THROUGH the object and return an array of hits
-    if(hit[1].transform.gameObject.name!="obj_Invader1") //If the first thing it hits that isn't itself's name is "obj_Invader1"
+    
+		/*
+		if(hit[1].transform.gameObject.name!="obj_Invader1") //If the first thing it hits that isn't itself's name is "obj_Invader1"
         {
         if (Time.time - t > 3f)
 			{
@@ -34,6 +36,7 @@ public class script_Invader1 : MonoBehaviour
                 t = Time.time;  
             }
 		}
+		*/
 	}
 	
 	void OnTriggerEnter2D(Collider2D coll)
