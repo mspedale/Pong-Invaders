@@ -4,7 +4,7 @@ Game Mechanic Additions (Essential)
 
 1. Space Invader enemies - In Progress (Cam)
 	a. Spawn with containment
-	b. Ball interaction
+	b. Ball interaction --- BUG FIXED!?
 		- The ball reflects off the space invaders, destroying them. The interaction is similar to wall interactions. X or Y 			  velocity is simply made negative.
 	c. Destroy upon contact with player projectile -- Done
 	d. Shoot their own projectiles

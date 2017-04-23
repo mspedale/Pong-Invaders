@@ -37,8 +37,9 @@ public class motherscript2 : MonoBehaviour
 
             if (hp<1)
 			{
-                Destroy (gameObject);
-			}
+                Application.LoadLevel("P1Win");
+                //Destroy (gameObject);
+            }
         }
 
 		//handles shield if ball hits mothership
@@ -56,16 +57,18 @@ public class motherscript2 : MonoBehaviour
         }
     }
 
+    // method that decreases HP on hit for the health bar
     protected void decreaseHealth()
     {
         float calc_Health = hp / 10f;
         setHealthBar(calc_Health);
     }
 
-
+    // changes the size of the HP bar
     public void setHealthBar(float myHealth)
     {
         healthBar.transform.localScale = new Vector3(myHealth, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+        healthBar.transform.position = new Vector3(healthBar.transform.position.x - 0.15f, healthBar.transform.position.y, healthBar.transform.position.z);
     }
 
     //regens shield over time

@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-//Handles the "Space Invaders" enemies
-public class script_Invader1 : MonoBehaviour 
+public class script_Invader2 : MonoBehaviour 
 {
     public GameObject projectile;
     GameObject projectileClone;
@@ -22,11 +20,11 @@ public class script_Invader1 : MonoBehaviour
 	{
     //fire weapons
      newPosition = transform.position;
-    Vector3 eps = new Vector3(0f,-.05f,0f);
+    Vector3 eps = new Vector3(0f,.05f,0f);
     newPosition = newPosition + eps;
     
-    RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, Vector2.down); //raycast THROUGH the object and return an array of hits
-    if(hit[1].transform.gameObject.name!="obj_Invader1") //If the first thing it hits that isn't itself's name is "obj_Invader1"
+    RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, Vector2.up); //raycast THROUGH the object and return an array of hits
+    if(hit[1].transform.gameObject.name!="obj_Invader2") //If the first thing it hits that isn't itself's name is "obj_Invader1"
         {
         if (Time.time - t > 3f)
 			{
