@@ -24,5 +24,8 @@ EditorBuildSettings:
     path: Assets/Scenes/HowToPlay3.unity
     guid: aa7d32afa8db625468125a3c0f394e96
   - enabled: 1
+    path: Assets/Scenes/P1Win.unity
+    guid: 37d28c51b5f4e224ab36594038d870ad
+  - enabled: 1
     path: Assets/Scenes/P2Win.unity
     guid: 5eaa80da082ed8e43abe90f89b7b96a0

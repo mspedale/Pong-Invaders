@@ -9,9 +9,12 @@ public class ballScript : MonoBehaviour
 	
 	public GameObject obj_player;
 	public GameObject obj_player2;
+
 	private playerControl playerControl;
 	private playerControl2 playerControl2;
+
 	Rigidbody2D ballRigidBody;
+
 	public float reflectionAngle;
 	public float deadZone;
 	private float activeZoneLeft, activeZoneRight;
@@ -57,6 +60,25 @@ public class ballScript : MonoBehaviour
 		// velocity =(velX,velY,0);
 	    //transform.position = new Vector3(0,velY,0);
 	    currentVelocity = Mathf.Sqrt(Mathf.Pow(ballRigidBody.velocity.x,2)+Mathf.Pow(ballRigidBody.velocity.y,2));
+
+		// should keep ball from moving totally horiozontally (removed for now)
+		/*
+		var left = Vector3.Dot(ballRigidBody.velocity.normalized, Vector3.left);
+		if (left > 0.98 || left < -0.98) 
+		{
+			Debug.Log ("Horizontal (LEFT): " +Vector3.left);
+			var v = Random.insideUnitCircle * 2;
+			ballRigidBody.velocity += v;
+		}	
+
+		var right = Vector3.Dot(ballRigidBody.velocity.normalized, Vector3.right);
+		if (right > 0.98 || right < -0.98) 
+		{
+			Debug.Log ("Horizontal (RIGHT): " +Vector3.right);
+			var v = Random.insideUnitCircle * 2;
+			ballRigidBody.velocity += v;
+		}
+		*/
 	}
 	
 	
