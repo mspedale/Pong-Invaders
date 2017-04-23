@@ -39,12 +39,7 @@ public class script_InvaderFleet1 : MonoBehaviour {
 			// X and Y steps
 			if(restTime+1 > 0) // if restTime reached 0 in THIS frame
 			{
-				// If-statement for determining whether next step will run into a wall
-					// First, need to determine which space invader is farthest to the right if xDir=1, or to the left if xDir = -1
-						// Try http://answers.unity3d.com/questions/594210/get-all-children-gameobjects.html
-						// or https://docs.unity3d.com/ScriptReference/Component.GetComponentsInChildren.html
-					// Next, need to raycast at (stepXsize + half invader size)  to determine whether another step will cause a collision.
-						// try Collider2D.Raycast()?
+				// Create an array of all invaders in InvaderFleet
 				childTransform = GetComponentsInChildren<Transform>(false);
 				Vector2 curPosition = new Vector2(0f,0f);
 				float outermostX = 0;		// used to record the x-position of the outermost invaders
@@ -55,17 +50,30 @@ public class script_InvaderFleet1 : MonoBehaviour {
 						outermostX = curPosition.x;
 					}
 				}
-				print(outermostX);
 				
+				// Raycast at (stepXsize + half invader size)  to determine whether another step will cause a collision.  Collider2D.Raycast()?
+				RaycastHit2D[] check = Physics2D.RaycastAll(new Vector2(outermostX,transform.position.y), new Vector2(xDir,0f), stepXsize+0.5f); //raycast THROUGH the object and return an array of hit
+				bool wallAhead = false;
+				for (int i=0; i < check.Length; i++) {
+					if(check[i].transform.gameObject.tag =="Wall") // Check if a wall is in the raycast
+					{
+						wallAhead = true;
+					}
+				}
 				
-				
-				// If it does, make xDir *= -1, and do a StepY
-				// else: 
+				// Will we run into a wall on the next step?
+				if (wallAhead == true) {
+					// StepY
+					destination.y = currentPosition.y - stepYsize;  // change to "currentPosition.y + stepYsize" for InvaderFleet2
+					destination.x = currentPosition.x;
+					xDir *= -1;
+				}
+				else { 
 					//StepX
 					print("StepX");
 					destination.y = currentPosition.y;
 					destination.x = currentPosition.x + stepXsize * xDir;
-				
+				}
 				restTime--;	// Decrement restTime so this if-statement doesn't get called indefinitely
 			}
 			
@@ -77,26 +85,22 @@ public class script_InvaderFleet1 : MonoBehaviour {
 			else // Destination reached
 			{
 				newVelocity.x = 0f;
-				newPosition.x = destination.x;
-				restTime = maxRest;	
+				newPosition.x = destination.x;	
 				
-				print("X Destination reached");
-			}
-				
-			// Y movement
-			if (currentPosition.y > destination.y)   // for InvaderFleet 2, switch to <
-			{
-				newVelocity.y = -stepSpeed;		// for Invaderfleet 2, make stepSpeed positive
-			}
-			else // Destination reached
-			{
-				newVelocity.y = 0f;
-				newPosition.y = destination.y;
-				// restTime = maxRest;	
-				
-				print("Y Destination reached");
+				// Y movement
+				if (currentPosition.y > destination.y)  // Not yet reached destination // for InvaderFleet2, switch ">" to "<"
+				{
+					newVelocity.y = -stepSpeed;		// for InvaderFleet2, make stepSpeed positive
+				}
+				else // Destination reached
+				{
+					newVelocity.y = 0f;
+					newPosition.y = destination.y;
+					restTime = maxRest;	
+				}	
 			}	
 		}
+		
 		// At rest
 		else 
 		{
@@ -106,10 +110,5 @@ public class script_InvaderFleet1 : MonoBehaviour {
 		// Position and velocity update
 		fleetRB.transform.position = newPosition;
 		fleetRB.velocity = newVelocity;
-	}
-	
-	void StepY () {
-		destination.y = currentPosition.y - stepYsize;  // change to "+ stepYsize" for InvaderFleet 2
-		destination.x = currentPosition.x;
 	}
 }

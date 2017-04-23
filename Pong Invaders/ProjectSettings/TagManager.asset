@@ -10,6 +10,7 @@ TagManager:
   - Projectile_p1
   - Projectile_p2
   - Shield
+  - Wall
   layers:
   - Default
   - TransparentFX
