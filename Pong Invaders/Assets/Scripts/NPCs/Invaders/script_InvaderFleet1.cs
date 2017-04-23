@@ -52,7 +52,7 @@ public class script_InvaderFleet1 : MonoBehaviour {
 				}
 				
 				// Raycast at (stepXsize + half invader size)  to determine whether another step will cause a collision.  Collider2D.Raycast()?
-				RaycastHit2D[] check = Physics2D.RaycastAll(new Vector2(outermostX,transform.position.y), new Vector2(xDir,0f), stepXsize+0.5f); //raycast THROUGH the object and return an array of hit
+				RaycastHit2D[] check = Physics2D.RaycastAll(new Vector2(outermostX,transform.position.y), new Vector2(xDir,0f), stepXsize+1f); //raycast THROUGH the object and return an array of hit
 				bool wallAhead = false;
 				for (int i=0; i < check.Length; i++) {
 					if(check[i].transform.gameObject.tag =="Wall") // Check if a wall is in the raycast
@@ -70,7 +70,7 @@ public class script_InvaderFleet1 : MonoBehaviour {
 				}
 				else { 
 					//StepX
-					print("StepX");
+					//print("StepX");
 					destination.y = currentPosition.y;
 					destination.x = currentPosition.x + stepXsize * xDir;
 				}
