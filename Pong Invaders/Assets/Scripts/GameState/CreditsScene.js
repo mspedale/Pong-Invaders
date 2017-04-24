@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-var speed = 0.03;
+//var speed = 0.002;
 var crawling = false;
 var creds;
 
@@ -18,7 +18,7 @@ function Start()
     creds += "BitJunkie is...\n\n";
 	creds += "Lead Game Design:\nCameron Moore\n\n";
 	creds += "BitJunkie Team Leader:\nMatthew Spedale\n\n";
-    creds += "Programming:\nJonah Knickles\nCameron Moore\nMatthew Spedale\nJeffrey Tolliver\n\n";
+    creds += "Programming:\nJonah Knickles\nCameron Moore\nMatthew Spedale\n\n";
     creds += "Art:\nTatyana Lee\n\n";
     creds += "Music:\nMatthew Spedale\nJeffrey Tolliver\n\n";
     creds += "Sound Design:\nMatthew Spedale\n\n";
@@ -36,9 +36,9 @@ Tatyana Lee (ART): Artist
 
 Cameron Moore (CSC): Lead Designer, Programmer
 
-Matthew Spedale (CSC): Team Leader, Sound & Music Designer
+Matthew Spedale (CSC): Team Leader, Sound & Music Designer, Programmer
 
-Jeffrey Tolliver (CSC): Programmer, Sound & Music Designer
+Jeffrey Tolliver (CSC): Music Designer
 
 Patrick Richardson: Bit Junkie Logo Designer
 */
@@ -49,7 +49,7 @@ Patrick Richardson: Bit Junkie Logo Designer
 function Update ()
 {
     // sets x pos
-	gameObject.transform.position.x = .41;
+    gameObject.transform.position.x = .41;
 
     if (!crawling)
     {
@@ -58,8 +58,7 @@ function Update ()
 
     // moves text upward
     // transform.Translate(Vector3.up * Time.deltaTime * speed);
-    transform.Translate(Vector3.up * 0.02 * speed);
-
+    transform.Translate(Vector3.up * 0.02 * 0.09);
 
     /*  Stops text at y position; implement individual line deletion later
     if (gameObject.transform.position.y > .95)
