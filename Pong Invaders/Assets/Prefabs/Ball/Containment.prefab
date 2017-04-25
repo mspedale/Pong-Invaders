@@ -26,9 +26,10 @@ GameObject:
   - component: {fileID: 82499361572855494}
   - component: {fileID: 82349408321534430}
   - component: {fileID: 82361779942941064}
-  - component: {fileID: 198320667811112262}
-  - component: {fileID: 199456711215037938}
   - component: {fileID: 114978177683978932}
+  - component: {fileID: 199388139170629376}
+  - component: {fileID: 198189845297443000}
+  - component: {fileID: 114482478283980566}
   m_Layer: 0
   m_Name: Containment
   m_TagString: Untagged
@@ -750,6 +751,23 @@ MonoBehaviour:
   prefab_ball: {fileID: 1297867710284142}
   invader: {fileID: 1382185468810062, guid: 40fd56f8c688bfe44b7c8a79b04f58af, type: 2}
   invader2: {fileID: 1859009132640742, guid: d05caab82acb6544c8387f2b549568d7, type: 2}
+  energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
+  energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
+--- !u!114 &114482478283980566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1044002250130482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35b4979b186b41741829e85803900327, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: 0
+  myString: Mute
+  Mute: 0
+  guiSkin: {fileID: 0}
 --- !u!114 &114835971924492704
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -782,7 +800,7 @@ MonoBehaviour:
   myString: Mute
   Mute: 0
   guiSkin: {fileID: 0}
---- !u!198 &198320667811112262
+--- !u!198 &198189845297443000
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -837,7 +855,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1213814103
+  randomSeed: -436868132
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3791,7 +3809,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
---- !u!199 &199456711215037938
+--- !u!199 &199388139170629376
 ParticleSystemRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 1

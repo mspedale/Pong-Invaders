@@ -15,7 +15,8 @@ public class containmentScript : MonoBehaviour
 	public GameObject prefab_ball;
     public GameObject invader;
     public GameObject invader2;
-
+    public GameObject energy;
+    public GameObject energy2;
     Rigidbody2D ballBody;
 	Rigidbody2D containment;
 	
@@ -114,6 +115,7 @@ public class containmentScript : MonoBehaviour
                 prefab_ball.SetActive(true);
 				prefab_ball.transform.SetParent(null);
                 prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-150.0f, 150.0f), ballForce));
+                Instantiate(energy, newPosition, Quaternion.identity);
 				Destroy (gameObject);
 			}
 			
@@ -127,6 +129,7 @@ public class containmentScript : MonoBehaviour
                 prefab_ball.SetActive(true);
 				prefab_ball.transform.SetParent(null);
 				prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-150.0f, 150.0f),-ballForce));
+                Instantiate(energy2, newPosition, Quaternion.identity);
 				Destroy (gameObject);		
 			}
 		}
