@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114975579516963902}
   m_Layer: 0
   m_Name: redDrone
-  m_TagString: Untagged
+  m_TagString: redDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

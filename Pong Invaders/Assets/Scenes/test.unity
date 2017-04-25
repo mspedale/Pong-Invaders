@@ -622,7 +622,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1186172778
+  randomSeed: -717898965
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4959,8 +4959,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 1369047998976976, guid: be0fd81ab44eb7f4b9dde2a0d2eacdfe, type: 2}
-      propertyPath: m_StaticEditorFlags
+    - target: {fileID: 1731556763539142, guid: be0fd81ab44eb7f4b9dde2a0d2eacdfe, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

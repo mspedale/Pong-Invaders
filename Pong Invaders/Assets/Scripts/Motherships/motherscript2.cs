@@ -107,6 +107,7 @@ public class motherscript2 : MonoBehaviour
 	{
 		// Drone Fleet Spawn
 		if(eng>=10){
+
         Instantiate(redDroneFleet, new Vector2(0f,6.3f), Quaternion.identity);
             eng -= 10;
         }
