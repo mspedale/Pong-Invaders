@@ -95,8 +95,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4344771898017292}
-  - component: {fileID: 114486535691667062}
   - component: {fileID: 50427853869534228}
+  - component: {fileID: 114486535691667062}
   m_Layer: 0
   m_Name: InvaderFleet
   m_TagString: invader

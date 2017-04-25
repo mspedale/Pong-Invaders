@@ -5,7 +5,7 @@ using UnityEngine;
 public class energyScript2 : MonoBehaviour {
     public Vector3 receptor = new Vector3(2.515313f, 9.66f, 0f);
      public Transform target;
-    float speed =6f;
+    float speed =12f;
 	// Use this for initialization
 	void Start () {
 		
