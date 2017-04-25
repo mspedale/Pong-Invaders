@@ -31,6 +31,10 @@ public class playerProjectile : MonoBehaviour
 		{
 			Destroy (gameObject);
         }
+		
+		if(coll.gameObject.tag == "Projectile_p2") {
+			Destroy(gameObject);
+		}
 	}
 
 	//destroys projectile upon impact

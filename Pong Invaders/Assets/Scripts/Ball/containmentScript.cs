@@ -13,8 +13,8 @@ public class containmentScript : MonoBehaviour
     bool paused = false;
 	
 	public GameObject prefab_ball;
-    public GameObject invader;
-    public GameObject invader2;
+    public GameObject InvaderFleet;
+    public GameObject InvaderFleet2;
     public GameObject energy;
     public GameObject energy2;
     Rigidbody2D ballBody;
@@ -48,10 +48,8 @@ public class containmentScript : MonoBehaviour
 		hp = maxHP;
 		containment = gameObject.GetComponent<Rigidbody2D>();
 		
-		/*
-        Instantiate(invader, new Vector2(0, -3), Quaternion.identity);
-        Instantiate(invader2, new Vector2(0, -3), Quaternion.identity);
-		*/
+        Instantiate(InvaderFleet, new Vector2(0f, -1.8f), Quaternion.identity);
+        Instantiate(InvaderFleet2, new Vector2(0f, 1.8f), Quaternion.identity);
     }
 	
 	// Update is called once per frame

@@ -749,8 +749,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab_ball: {fileID: 1297867710284142}
-  invader: {fileID: 1382185468810062, guid: 40fd56f8c688bfe44b7c8a79b04f58af, type: 2}
-  invader2: {fileID: 1859009132640742, guid: d05caab82acb6544c8387f2b549568d7, type: 2}
+  InvaderFleet: {fileID: 1382185468810062, guid: 40fd56f8c688bfe44b7c8a79b04f58af,
+    type: 2}
+  InvaderFleet2: {fileID: 1859009132640742, guid: d05caab82acb6544c8387f2b549568d7,
+    type: 2}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
   energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!114 &114482478283980566
@@ -855,7 +857,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -436868132
+  randomSeed: 1403316783
   InitialModule:
     serializedVersion: 3
     enabled: 1

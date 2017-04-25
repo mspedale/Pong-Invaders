@@ -22,7 +22,7 @@ public class blueDrone : MonoBehaviour {
     newPosition = newPosition + eps;
     
     RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, Vector2.up); //raycast THROUGH the object and return an array of hits
-    if(hit[1].transform.gameObject.name!="obj_player") //If the first thing it hits that isn't itself's name is "obj_Invader1"
+    if(hit[1].transform.gameObject.name!="obj_player") //If the first thing it hits that isn't itself's name is "obj_player"
         {
         if (Time.time - t > 3f)
 			{

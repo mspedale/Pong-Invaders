@@ -22,6 +22,8 @@ public class motherScript : MonoBehaviour
     public GameObject shieldObj;
     public GameObject ContainmentPrefab;
     public GameObject healthBar;
+	public GameObject blueDroneFleet;
+	
     int eng =0;
     int hp=10;
     bool shield=true;
@@ -113,9 +115,10 @@ public class motherScript : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		// Drone Fleet Spawn
 		if(eng>=10){
-        //drone fleet spawn code
-            eng=0;
+        Instantiate(blueDroneFleet, new Vector2(0f,-6.3f), Quaternion.identity);
+            eng -= 10;
         }
 	}
 }
