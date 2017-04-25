@@ -360,7 +360,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 447708505}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5d317c89dd532034f999f6fc8c1a4df1, type: 3}
@@ -540,7 +540,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 1876172327
+  randomSeed: -1799724058
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4024,8 +4024,6 @@ MonoBehaviour:
   ContainmentPrefab: {fileID: 1044002250130482, guid: 1da34ba499564134b92027dea4f7e750,
     type: 2}
   healthBar: {fileID: 0}
-  bgImage: {fileID: 0}
-  fgImage: {fileID: 0}
 --- !u!82 &1016580315
 AudioSource:
   m_ObjectHideFlags: 0
