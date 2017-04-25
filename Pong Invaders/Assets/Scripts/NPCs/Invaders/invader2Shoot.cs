@@ -25,7 +25,7 @@ public class invader2Shoot : MonoBehaviour {
 	//destroys projectile upon impact
 	void OnTriggerEnter2D(Collider2D coll) 
 	{
-        if(coll.gameObject.name!="obj_Invader2")
+        if(coll.gameObject.tag!="invader")
 		{
 		Destroy (gameObject);
         }

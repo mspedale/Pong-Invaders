@@ -24,7 +24,7 @@ public float speed = 0.5f;
 	//destroys projectile upon impact
 	void OnTriggerEnter2D(Collider2D coll) 
 	{
-        if(coll.gameObject.name!="obj_Invader1")
+        if(coll.gameObject.tag!="invader")
 		{
 		    Destroy (gameObject);
         }

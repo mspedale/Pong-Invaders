@@ -11,6 +11,7 @@ TagManager:
   - Projectile_p2
   - Shield
   - Wall
+  - invader
   layers:
   - Default
   - TransparentFX

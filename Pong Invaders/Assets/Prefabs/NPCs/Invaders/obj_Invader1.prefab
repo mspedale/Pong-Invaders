@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 212578084240764420}
   m_Layer: 0
   m_Name: obj_Invader1
-  m_TagString: Untagged
+  m_TagString: invader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

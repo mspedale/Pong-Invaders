@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 212561474636588156}
   m_Layer: 0
   m_Name: obj_Invader1 (1)
-  m_TagString: Untagged
+  m_TagString: invader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 212949262959702972}
   m_Layer: 0
   m_Name: obj_Invader1
-  m_TagString: Untagged
+  m_TagString: invader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 212918289723091712}
   m_Layer: 0
   m_Name: obj_Invader1 (2)
-  m_TagString: Untagged
+  m_TagString: invader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 114595408331356472}
   m_Layer: 0
   m_Name: obj_Invader1
-  m_TagString: Untagged
+  m_TagString: invader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 50427853869534228}
   m_Layer: 0
   m_Name: InvaderFleet
-  m_TagString: Untagged
+  m_TagString: invader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 212630316339779222}
   m_Layer: 0
   m_Name: obj_Invader1 (4)
-  m_TagString: Untagged
+  m_TagString: invader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 212453401766687438}
   m_Layer: 0
   m_Name: obj_Invader1 (3)
-  m_TagString: Untagged
+  m_TagString: invader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 212520010145020900}
   m_Layer: 0
   m_Name: obj_Invader1 (5)
-  m_TagString: Untagged
+  m_TagString: invader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 212954765046277800}
   m_Layer: 0
   m_Name: obj_Invader1 (6)
-  m_TagString: Untagged
+  m_TagString: invader
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
