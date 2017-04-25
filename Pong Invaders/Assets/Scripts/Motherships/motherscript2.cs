@@ -19,7 +19,7 @@ public class motherscript2 : MonoBehaviour
     public GameObject shieldObj;
     public GameObject ContainmentPrefab;
     public GameObject healthBar;
-
+    int eng=0;
     int hp=10;
     bool shield=true;
     GameObject shieldclone;
@@ -28,6 +28,10 @@ public class motherscript2 : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
 	{
         //handles HP if shield is down
+        if(other.gameObject.name=="energy2(Clone)"){
+            eng++;
+            Destroy(other.gameObject);
+        }
         if(shield==false)
 		{
             print(hp);
@@ -99,6 +103,8 @@ public class motherscript2 : MonoBehaviour
     // Update is called once per frame
     void Update () 
 	{
-		
+		if(eng>=10){
+        //drone fleet spawn code
+        }
 	}
 }

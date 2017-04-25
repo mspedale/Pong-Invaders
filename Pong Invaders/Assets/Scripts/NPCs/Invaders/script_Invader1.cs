@@ -8,6 +8,7 @@ public class script_Invader1 : MonoBehaviour
 {
     public GameObject projectile;
     GameObject projectileClone;
+    public GameObject energy;
     float t;
     Vector3 newPosition;
 
@@ -44,6 +45,7 @@ public class script_Invader1 : MonoBehaviour
 		//destroys invader if it is hit by the fighter ship projectile
 		if (coll.gameObject.tag == "Projectile_p1" || coll.gameObject.tag == "Projectile_p2") 
 		{
+            Instantiate(energy, newPosition, Quaternion.identity);
 			Destroy (gameObject);
 		}
 	}
