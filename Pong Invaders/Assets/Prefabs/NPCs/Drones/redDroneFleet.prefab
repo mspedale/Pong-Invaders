@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114966631590925574}
   m_Layer: 0
   m_Name: redDrone (4)
-  m_TagString: Untagged
+  m_TagString: redDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 114926505846139484}
   m_Layer: 0
   m_Name: redDrone (3)
-  m_TagString: Untagged
+  m_TagString: redDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 114207384423222444}
   m_Layer: 0
   m_Name: redDrone (2)
-  m_TagString: Untagged
+  m_TagString: redDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 114843140020017334}
   m_Layer: 0
   m_Name: redDrone
-  m_TagString: Untagged
+  m_TagString: redDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,11 +97,11 @@ GameObject:
   - component: {fileID: 4218222449876552}
   m_Layer: 0
   m_Name: redDroneFleet
-  m_TagString: Untagged
+  m_TagString: redDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1992560263308640
 GameObject:
   m_ObjectHideFlags: 0
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 114527135638395382}
   m_Layer: 0
   m_Name: redDrone (1)
-  m_TagString: Untagged
+  m_TagString: redDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,6 +13,8 @@ TagManager:
   - Wall
   - invader
   - energy
+  - redDrone
+  - blueDrone
   layers:
   - Default
   - TransparentFX

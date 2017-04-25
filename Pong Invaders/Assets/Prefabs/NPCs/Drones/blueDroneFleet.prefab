@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50393025504324316}
   m_Layer: 0
   m_Name: blueDrone (4)
-  m_TagString: Untagged
+  m_TagString: blueDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 50082902303164740}
   m_Layer: 0
   m_Name: blueDrone (2)
-  m_TagString: Untagged
+  m_TagString: blueDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,7 +63,7 @@ GameObject:
   - component: {fileID: 50899076931118768}
   m_Layer: 0
   m_Name: blueDrone
-  m_TagString: Untagged
+  m_TagString: blueDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 50429250068929944}
   m_Layer: 0
   m_Name: blueDrone (3)
-  m_TagString: Untagged
+  m_TagString: blueDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 50527332821031074}
   m_Layer: 0
   m_Name: blueDrone (1)
-  m_TagString: Untagged
+  m_TagString: blueDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 4754887206782940}
   m_Layer: 0
   m_Name: blueDroneFleet
-  m_TagString: Untagged
+  m_TagString: blueDrone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

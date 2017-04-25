@@ -4959,8 +4959,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
-    - target: {fileID: 1731556763539142, guid: be0fd81ab44eb7f4b9dde2a0d2eacdfe, type: 2}
-      propertyPath: m_IsActive
+    - target: {fileID: 1369047998976976, guid: be0fd81ab44eb7f4b9dde2a0d2eacdfe, type: 2}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
