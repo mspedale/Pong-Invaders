@@ -28,7 +28,7 @@ public class playerProjectile2 : MonoBehaviour
 	//destroys projectile upon impact
 	void OnTriggerEnter2D(Collider2D coll) 
 	{
-        if(coll.gameObject.tag!= "Player2" && coll.gameObject.name!="redDrone")
+        if(coll.gameObject.tag!= "Player2" && coll.gameObject.name!="redDrone" && coll.gameObject.tag != "energy")
 		{
 		Destroy (gameObject);
         }

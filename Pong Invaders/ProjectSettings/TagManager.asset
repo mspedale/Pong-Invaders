@@ -12,6 +12,7 @@ TagManager:
   - Shield
   - Wall
   - invader
+  - energy
   layers:
   - Default
   - TransparentFX
