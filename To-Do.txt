@@ -15,12 +15,12 @@ Game Mechanic Additions (Essential)
 		  advancing vertically each time they reach a horizontal edge.
 		- As they advance toward a player, they shoot more often.
 	   	- If allowed to advance to maximum, they kimikaze attack the player or mothership.
+		
+2. Kooima Notes from Presentation:
+	- Indication for when fighter ship is disabled (visual and audio)
+	- Invaders just fly towards the mothership forever (either have them move forward and back, or die when they collide)
+	- Make the energy more distinct from projectiles (maybe fly towards a meter on the sides instead of motherships)
 
-2. Sound Design (Matt)
-        - Standardize sounds for a more unified design (similar cuttoffs, lengths, etc.)
-        - Work on array function for randomizing sound to avoid redundancy on effects that repeat often (ball collision, laser, etc)
-        - (Implemented comment for this in ballscript, test later)
-	- Still need sounds for: sound for when fighter ship is disabled.
 
 
 ------------------------------------
@@ -113,4 +113,6 @@ Completed Tasks
 	- Player paddles will have HP.   
 	- HP will decrease when shot by another player or space invader enemy. 
 	- When HP is 0, paddle will temporarily destroy or deactivate.
+	
+10. Sound Design - Completed (Matt)
 	
