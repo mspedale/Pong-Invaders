@@ -33,22 +33,22 @@ function OnGUI ()
 	if(menu)
 	{
 	    //                       x position            y position      x-width y-width  text
-		if (GUI.Button (Rect (Screen.width/2 - 100, Screen.height/2 - 200, 200, 50), "Start Game")) 
+		if (GUI.Button (Rect (Screen.width/2 - 100, Screen.height/2 - 150, 200, 50), "Start Game")) 
 		{
         	Application.LoadLevel("test");
         }
          
-    	if (GUI.Button (Rect (Screen.width/2 - 100, Screen.height/2 - 100, 200, 50), "How To Play")) 
+    	if (GUI.Button (Rect (Screen.width/2 - 100, Screen.height/2 - 75, 200, 50), "How To Play")) 
         {
             Application.LoadLevel("HowToPlay");
         }
 
-        if (GUI.Button (Rect (Screen.width/2 - 100, Screen.height/2, 200, 50), "Credits"))
+        if (GUI.Button (Rect (Screen.width/2 - 100, Screen.height/2 + 75, 200, 50), "Credits"))
         {
         	Application.LoadLevel("Credits");
         }
 
-        if (GUI.Button (Rect (Screen.width/2 - 100, Screen.height/2 + 100, 200, 50), "Quit Game"))
+        if (GUI.Button (Rect (Screen.width/2 - 100, Screen.height/2 + 150, 200, 50), "Quit Game"))
         {
         	Application.Quit();
         }
