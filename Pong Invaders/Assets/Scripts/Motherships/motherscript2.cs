@@ -105,6 +105,7 @@ public class motherscript2 : MonoBehaviour
 	{
 		if(eng>=10){
         //drone fleet spawn code
+            eng=0;
         }
 	}
 }
