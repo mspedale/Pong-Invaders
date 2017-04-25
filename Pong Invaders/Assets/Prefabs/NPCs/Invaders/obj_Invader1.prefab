@@ -101,6 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1516342981985476, guid: 67f62164a54b1db48967ec7fd78c27c9, type: 2}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
+  energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!212 &212578084240764420
 SpriteRenderer:
   m_ObjectHideFlags: 1

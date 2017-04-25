@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212680299706081794}
   - component: {fileID: 58198706456212302}
   - component: {fileID: 50904499991092464}
+  - component: {fileID: 114626708586174168}
   m_Layer: 0
   m_Name: energy
   m_TagString: Untagged
@@ -77,6 +78,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &114626708586174168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515784025971528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 453235b673e64fd45993bf973292dac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  receptor: {x: -2.515313, y: -9.66, z: 0}
+  target: {fileID: 0}
 --- !u!212 &212680299706081794
 SpriteRenderer:
   m_ObjectHideFlags: 1

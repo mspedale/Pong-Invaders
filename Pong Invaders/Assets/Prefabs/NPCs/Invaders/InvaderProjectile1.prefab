@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4807082643128084}
   - component: {fileID: 212575018357282508}
   - component: {fileID: 61138087824982516}
-  - component: {fileID: 114806576899712478}
+  - component: {fileID: 114620847032857514}
   m_Layer: 0
   m_Name: InvaderProjectile1
   m_TagString: Untagged
@@ -67,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.99999994}
   m_EdgeRadius: 0
---- !u!114 &114806576899712478
+--- !u!114 &114620847032857514
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -75,11 +75,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1516342981985476}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a63ea6a35165341b6d26462c64461c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e73c001993edf24a845bf7a8977966b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.2
-  direction: -1
+  speed: 0.5
 --- !u!212 &212575018357282508
 SpriteRenderer:
   m_ObjectHideFlags: 1
