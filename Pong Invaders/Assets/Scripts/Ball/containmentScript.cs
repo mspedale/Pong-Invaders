@@ -47,9 +47,11 @@ public class containmentScript : MonoBehaviour
 		maxHP = 5; //rand.Next(6,12); (testing health)
 		hp = maxHP;
 		containment = gameObject.GetComponent<Rigidbody2D>();
-
+		
+		/*
         Instantiate(invader, new Vector2(0, -3), Quaternion.identity);
         Instantiate(invader2, new Vector2(0, -3), Quaternion.identity);
+		*/
     }
 	
 	// Update is called once per frame
