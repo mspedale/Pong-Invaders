@@ -24,18 +24,21 @@ public class motherScript : MonoBehaviour
     public GameObject healthBar;
 	public GameObject blueDroneFleet;
 	
+	public Vector2 fleetPosition = new Vector2(0f,-10f);
+	
     int eng =0;
     int hp=10;
     bool shield=true;
     GameObject shieldclone;
-    Vector3 position = new Vector3(0f,-10.18f,0f);
+    //Vector3 position = new Vector3(0f,0f,0f);	// original values:  (0f,-10.18f,0f);
 
     void OnTriggerEnter2D(Collider2D other)
 	{
-        if(other.gameObject.name=="energy(Clone)")
+        if(other.gameObject.name == "energy(Clone)")
         {
-         eng++;
-         Destroy(other.gameObject);
+			eng++;
+			Destroy(other.gameObject);
+			print("energy:" + eng);
         }
         //handles HP if shield is down
         if(shield==false && other.gameObject.name!="energy")
@@ -51,15 +54,14 @@ public class motherScript : MonoBehaviour
             	//Destroy (gameObject);
 			}
         }
-
+		
+		
 		//handles shield if ball hits mothership
         if(other.gameObject.tag=="Ball")
 		{
             print("BallHit");
             shield=false;
-            shieldclone.SetActive(false);
-            //Destroy(shieldclone);
-            print(shield);
+            shieldObj.SetActive(false);
             Destroy (other.gameObject);
             StartCoroutine(shieldDelay());
             shielddisable.Play();
@@ -93,8 +95,8 @@ public class motherScript : MonoBehaviour
 		
         yield return new WaitForSeconds(5);
         shield=true;
-        shieldclone.SetActive(true);
-        //GameObject shieldclone = Instantiate(shieldObj, position, Quaternion.identity) as GameObject;
+        shieldObj.SetActive(true);
+        //GameObject shieldObj = Instantiate(shieldObj, position, Quaternion.identity) as GameObject;
         GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity);
         shieldenable.Play();
  	}
@@ -102,8 +104,8 @@ public class motherScript : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-        shieldclone  = Instantiate(shieldObj, position, Quaternion.identity) as GameObject;
-
+        shield = true;
+		shieldObj.SetActive(true);
         //audio
         AudioSource[] audio = GetComponents<AudioSource>();
         shielddisable = audio[0];
@@ -117,8 +119,15 @@ public class motherScript : MonoBehaviour
 	{
 		// Drone Fleet Spawn
 		if(eng>=10){
-        Instantiate(blueDroneFleet, new Vector2(0f,-6.3f), Quaternion.identity);
+			Instantiate(blueDroneFleet, fleetPosition, Quaternion.identity);
             eng -= 10;
         }
+
+		// Shield regenration
+		if (shield && !shieldObj.activeSelf) {	// Compares local var "shield" with shieldObj's active status.  Yields true if the shield was deactivated on this frame.
+			shield = false;
+			StartCoroutine(shieldDelay());
+            shielddisable.Play();
+		}
 	}
 }

@@ -21,10 +21,12 @@ public class motherscript2 : MonoBehaviour
     public GameObject healthBar;
 	public GameObject redDroneFleet;
 	
+	public Vector2 fleetPosition = new Vector2(0f,10f);
+	
     int eng=0;
     int hp=10;
     bool shield=true;
-    GameObject shieldclone;
+    //GameObject shieldclone;
     Vector3 position = new Vector3(0f,10.18f,0f);
 
     void OnTriggerEnter2D(Collider2D other)
@@ -53,13 +55,11 @@ public class motherscript2 : MonoBehaviour
 		{
             print("BallHit");
             shield=false;
-            //Destroy(shieldclone);
-            shieldclone.SetActive(false);
+			shieldObj.SetActive(false);		//shieldclone.SetActive(false);
             print(shield);
             Destroy (other.gameObject);
             StartCoroutine(shieldDelay());
             shielddisable.Play();
-
         }
     }
 
@@ -80,11 +80,9 @@ public class motherscript2 : MonoBehaviour
     //regens shield over time
     IEnumerator shieldDelay() 
 	{
-		
         yield return new WaitForSeconds(5);
         shield=true;
-        //GameObject shieldclone = Instantiate(shieldObj, position, Quaternion.identity) as GameObject;
-        shieldclone.SetActive(true);
+        shieldObj.SetActive(true);
 	    GameObject Containment = Instantiate(ContainmentPrefab, new Vector2(0,0), Quaternion.identity);
         shieldenable.Play();
     }
@@ -92,8 +90,9 @@ public class motherscript2 : MonoBehaviour
 	// Use this for initialization
 	void Start () 
 	{
-        shieldclone  = Instantiate(shieldObj, position ,Quaternion.identity) as GameObject;
-
+        //shieldclone  = Instantiate(shieldObj, position ,Quaternion.identity) as GameObject;
+		shieldObj.SetActive(true);
+		
         //audio
         AudioSource[] audio = GetComponents<AudioSource>();
         shielddisable = audio[0];
@@ -107,9 +106,15 @@ public class motherscript2 : MonoBehaviour
 	{
 		// Drone Fleet Spawn
 		if(eng>=10){
-
-        Instantiate(redDroneFleet, new Vector2(0f,6.3f), Quaternion.identity);
+			Instantiate(redDroneFleet, fleetPosition, Quaternion.identity);
             eng -= 10;
         }
+		
+		// Shield regenration -- (added by Cam 4/27)
+		if (shield && !shieldObj.activeSelf) {	// Compares local var "shield" with shieldObj's "active" status.  Yields true if the shield was deactivated on this frame.
+			shield = false;
+			StartCoroutine(shieldDelay());
+            shielddisable.Play();
+		}
 	}
 }

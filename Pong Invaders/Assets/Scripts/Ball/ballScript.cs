@@ -59,6 +59,8 @@ public class ballScript : MonoBehaviour
 		// Movement update
 		// velocity =(velX,velY,0);
 	    //transform.position = new Vector3(0,velY,0);
+		
+		// update local scalar value for velocity
 	    currentVelocity = Mathf.Sqrt(Mathf.Pow(ballRigidBody.velocity.x,2)+Mathf.Pow(ballRigidBody.velocity.y,2));
 
 		// should keep ball from moving totally horiozontally (removed for now)

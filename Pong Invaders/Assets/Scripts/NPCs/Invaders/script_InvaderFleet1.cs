@@ -9,7 +9,7 @@ public class script_InvaderFleet1 : MonoBehaviour {
 	public float stepSpeed = 1.25f;
 	public int xDir = 1;
 	public float stepXsize = 0.75f;
-	float stepX = 0f;
+	//float stepX = 0f;
 	public float stepYsize = 0.5f;
 	public int maxRest = 60;
 	private int restTime = 60;
@@ -39,11 +39,20 @@ public class script_InvaderFleet1 : MonoBehaviour {
 			// X and Y steps
 			if(restTime+1 > 0) // if restTime reached 0 in THIS frame
 			{
+				// Destroyes InvaderFleet object if it has no children
+				if (transform.childCount == 0) 
+				{
+					Destroy(gameObject);
+				}
+				
 				// Create an array of all invaders in InvaderFleet
 				childTransform = GetComponentsInChildren<Transform>(false);
 				Vector2 curPosition = new Vector2(0f,0f);
 				float outermostX = 0;		// used to record the x-position of the outermost invaders
-				// For-loop determines the x-position of the farthest Invader
+				
+				
+				
+				// For-loop determines the x-position of the Invader farthest to the right or left, depending on xDir
 				for (int i = 0; i < childTransform.Length; i++) { 
 					curPosition= childTransform[i].position;
 					if (curPosition.x * xDir > outermostX * xDir) {
@@ -70,7 +79,6 @@ public class script_InvaderFleet1 : MonoBehaviour {
 				}
 				else { 
 					//StepX
-					//print("StepX");
 					destination.y = currentPosition.y;
 					destination.x = currentPosition.x + stepXsize * xDir;
 				}

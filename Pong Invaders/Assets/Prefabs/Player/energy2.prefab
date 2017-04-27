@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89308134e7afac14f97ccf05b178eaed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  receptor: {x: 2.515313, y: 9.66, z: 0}
+  receptor: {x: 0, y: 14, z: 0}
   target: {fileID: 0}
 --- !u!212 &212080264475265212
 SpriteRenderer:
