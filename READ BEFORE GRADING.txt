@@ -1,0 +1,9 @@
+To whomever is grading this project, it is important to note that Pong Invaders uses a 
+custom 9:16 aspect ratio not native to Unity, and that doesn't get carried over when 
+downloading the project from GitHub.
+
+If you don't use this custom aspect ratio, there will be a lot of extra space on either 
+side of the playfield that'll make the game look weird.
+
+Be sure to add this custom aspect ratio (9:16) using the option in the "Game" window 
+before judging our game.  Thank you!
