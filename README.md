@@ -9,4 +9,5 @@ Please refer to our [wiki page](https://github.com/mspedale/Pong-Invaders/wiki) 
 1) Download the Pong Invaders GitHub repository. This can be done by clicking the "Clone or Download" button in the upper right corner of the Pong Invaders GitHub repository, and clicking "Download ZIP".
 2) Unzip the downloaded Pong Invaders zip folder.
 3) Open the project in Unity, and click the "Maximize on Play" button in the Unity GUI in the top-right
-4) Click the Play button (shaped like a play arrow) on the top of the Unity GUI to start the game.
+4) Be sure to add the custom aspect ratio (9:16) using the option in the "Game" window.
+5) Click the Play button (shaped like a play arrow) on the top of the Unity GUI to start the game.
