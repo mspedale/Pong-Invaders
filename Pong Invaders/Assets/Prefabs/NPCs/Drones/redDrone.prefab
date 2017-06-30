@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1988776380961004, guid: 4997f8238b5fcc9439530da0ee047b6e, type: 2}
+  deathExplosion: {fileID: 1604420473214298, guid: c0cad379b7eac794994dbcfd16a56027,
+    type: 2}
 --- !u!212 &212543070065456318
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -140,3 +142,4 @@ SpriteRenderer:
   m_Size: {x: 2.88, y: 2.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1

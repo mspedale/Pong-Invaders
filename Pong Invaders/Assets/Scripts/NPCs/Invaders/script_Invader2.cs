@@ -6,6 +6,8 @@ public class script_Invader2 : MonoBehaviour
 {
     public GameObject projectile;
     GameObject projectileClone;
+	public GameObject deathExplosion;
+	GameObject smallExplosionClone;
     public GameObject energy;
     public GameObject energy2;
     float t;
@@ -38,18 +40,20 @@ public class script_Invader2 : MonoBehaviour
 	
 	void OnTriggerEnter2D(Collider2D coll)
 	{
-		//destroys invader if it is hit by the fighter ship projectile
+		//destroys invader if it is hit by the player projectile
 		if (coll.gameObject.name == "playerProjectile(Clone)" || coll.gameObject.name == "blueProjectile(Clone)" )
             {
                 Instantiate(energy, newPosition, Quaternion.identity);
-				Destroy (gameObject);
+				Destroy();
+				//StartCoroutine(destroy());
 			}
 			
-			// Player Two (top) gets last shot
+			// If Player Two (top) gets last shot
 			else if (coll.gameObject.name == "playerProjectile2(Clone)" ||coll.gameObject.name == "redProjectile(Clone)")
             {
                 Instantiate(energy2, newPosition, Quaternion.identity);
-				Destroy (gameObject);		
+				Destroy();
+				//StartCoroutine(destroy());		
 			}
 	}
 	
@@ -58,7 +62,8 @@ public class script_Invader2 : MonoBehaviour
 		//destroys the invader if the ball runs into it
 		if (coll.gameObject.tag == "Ball" || coll.gameObject.tag == "Player2")
 		{
-			Destroy (gameObject);
+			Destroy();
+			//StartCoroutine(destroy());
 		}
 
 		/*
@@ -69,6 +74,22 @@ public class script_Invader2 : MonoBehaviour
 		*/
 	}
 
+	// Death Function
+	/*
+	IEnumerator destroy() 
+	{
+		yield return new WaitForSeconds (0);
+		smallExplosionClone = Instantiate(deathExplosion, newPosition, Quaternion.identity) as GameObject;
+		Destroy (gameObject);
+	}
+	*/
+	
+	void Destroy() {
+		smallExplosionClone = Instantiate(deathExplosion, newPosition, Quaternion.identity) as GameObject;
+		Destroy (gameObject);
+	}
+	
+	
     IEnumerator shoot() //more firing
     {
         yield return new WaitForSeconds (3);

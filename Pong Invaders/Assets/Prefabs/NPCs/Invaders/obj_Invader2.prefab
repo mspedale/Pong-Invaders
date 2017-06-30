@@ -100,6 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1841477950157514, guid: a83c03e5745e57f4a93999a16320f5c5, type: 2}
+  deathExplosion: {fileID: 1239552256059410, guid: adbd5610bb7d6024aa0dc3545fa264e5,
+    type: 2}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
   energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!212 &212027883968977244
@@ -142,3 +144,4 @@ SpriteRenderer:
   m_Size: {x: 3.57, y: 3.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1

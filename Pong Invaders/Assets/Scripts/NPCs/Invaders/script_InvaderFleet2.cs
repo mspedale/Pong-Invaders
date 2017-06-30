@@ -37,7 +37,7 @@ public class script_InvaderFleet2 : MonoBehaviour {
 		if (restTime <= 0)
 		{
 			// X and Y steps
-			if(restTime+1 > 0) // if restTime reached 0 in THIS frame
+			if(restTime+1 > 0) // if restTime reached 0 on THIS frame
 			{
 				// Destroyes InvaderFleet object if it has no children
 				if (transform.childCount == 0) 

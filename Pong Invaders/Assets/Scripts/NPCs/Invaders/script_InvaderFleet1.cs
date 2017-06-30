@@ -37,9 +37,9 @@ public class script_InvaderFleet1 : MonoBehaviour {
 		if (restTime <= 0)
 		{
 			// X and Y steps
-			if(restTime+1 > 0) // if restTime reached 0 in THIS frame
+			if(restTime+1 > 0) // if restTime reached 0 on THIS frame
 			{
-				// Destroyes InvaderFleet object if it has no children
+				// If invaderFleet has no children, destroy it.
 				if (transform.childCount == 0) 
 				{
 					Destroy(gameObject);
@@ -82,7 +82,7 @@ public class script_InvaderFleet1 : MonoBehaviour {
 					destination.y = currentPosition.y;
 					destination.x = currentPosition.x + stepXsize * xDir;
 				}
-				restTime--;	// Decrement restTime so this if-statement doesn't get called indefinitely
+				restTime--;	// Decrement restTime to -1 so this if-statement doesn't get called infinitely
 			}
 			
 			// X movement

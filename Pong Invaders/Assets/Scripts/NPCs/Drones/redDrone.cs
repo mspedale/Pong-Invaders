@@ -5,8 +5,12 @@ using UnityEngine;
 public class redDrone : MonoBehaviour {
     public GameObject projectile;
     GameObject projectileClone;
+	public GameObject deathExplosion;
+	GameObject smallExplosionClone;
+	
     float t;
     Vector3 newPosition;
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -37,7 +41,7 @@ public class redDrone : MonoBehaviour {
 		//destroys invader if it is hit by the fighter ship projectile
 		if (coll.gameObject.tag == "Projectile_p1" || coll.gameObject.name=="InvaderProjectile2(Clone)" || coll.gameObject.name == "blueProjectile(Clone)") 
 		{
-			Destroy (gameObject);
+			Destroy();
 		}
 	}
 	
@@ -46,13 +50,13 @@ public class redDrone : MonoBehaviour {
 		//destroys the ball if an invader runs into it
 		if (coll.gameObject.tag == "Ball")
 		{
-			Destroy (gameObject);
+			Destroy();
 		}
 
 		/*
 		if (coll.gameObject.tag == "Projectile_p1") 
 		{
-			Destroy (gameObject);
+			Destroy();
 		}
 		*/
 	}
@@ -62,5 +66,10 @@ public class redDrone : MonoBehaviour {
         projectileClone = Instantiate(projectile, newPosition, Quaternion.identity) as GameObject;
         Destroy(projectileClone, 3);
     }
+	
+	void Destroy() {
+		smallExplosionClone = Instantiate(deathExplosion, newPosition, Quaternion.identity) as GameObject;
+		Destroy (gameObject);
+	}
 	
 }

@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class blueDrone : MonoBehaviour {
-    public GameObject projectile;
+    
+	public GameObject projectile;
     GameObject projectileClone;
+	public GameObject deathExplosion;
+	GameObject smallExplosionClone;
+	
     float t;
     Vector3 newPosition;
+	
 	// Use this for initialization
 	void Start () 
 	{
@@ -37,7 +42,7 @@ public class blueDrone : MonoBehaviour {
 		//destroys invader if it is hit by the fighter ship projectile
 		if (coll.gameObject.tag == "Projectile_p2" || coll.gameObject.name=="InvaderProjectile1(Clone)" || coll.gameObject.name == "redProjectile(Clone)") 
 		{
-			Destroy (gameObject);
+			Destroy();
 		}
 	}
 	
@@ -46,13 +51,13 @@ public class blueDrone : MonoBehaviour {
 		//destroys the ball if an invader runs into it
 		if (coll.gameObject.tag == "Ball")
 		{
-			Destroy (gameObject);
+			Destroy();
 		}
 
 		/*
 		if (coll.gameObject.tag == "Projectile_p1") 
 		{
-			Destroy (gameObject);
+			Destroy();
 		}
 		*/
 	}
@@ -63,4 +68,8 @@ public class blueDrone : MonoBehaviour {
         Destroy(projectileClone, 3);
     }
 	
+	void Destroy() {
+		smallExplosionClone = Instantiate(deathExplosion, newPosition, Quaternion.identity) as GameObject;
+		Destroy (gameObject);
+	}
 }

@@ -442,6 +442,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1590861412411782, guid: 0eaa7f971908c604f9471aba15957ee8, type: 2}
+  deathExplosion: {fileID: 1604420473214298, guid: c0cad379b7eac794994dbcfd16a56027,
+    type: 2}
 --- !u!114 &114420062986564304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -454,6 +456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1590861412411782, guid: 0eaa7f971908c604f9471aba15957ee8, type: 2}
+  deathExplosion: {fileID: 1604420473214298, guid: c0cad379b7eac794994dbcfd16a56027,
+    type: 2}
 --- !u!114 &114596348425929190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -466,6 +470,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1590861412411782, guid: 0eaa7f971908c604f9471aba15957ee8, type: 2}
+  deathExplosion: {fileID: 1604420473214298, guid: c0cad379b7eac794994dbcfd16a56027,
+    type: 2}
 --- !u!114 &114782950503141634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -489,6 +495,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1590861412411782, guid: 0eaa7f971908c604f9471aba15957ee8, type: 2}
+  deathExplosion: {fileID: 1604420473214298, guid: c0cad379b7eac794994dbcfd16a56027,
+    type: 2}
 --- !u!114 &114850524880852530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -501,6 +509,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1590861412411782, guid: 0eaa7f971908c604f9471aba15957ee8, type: 2}
+  deathExplosion: {fileID: 1604420473214298, guid: c0cad379b7eac794994dbcfd16a56027,
+    type: 2}
 --- !u!212 &212365753188583922
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -541,6 +551,7 @@ SpriteRenderer:
   m_Size: {x: 2.88, y: 2.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212529616208470808
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -581,6 +592,7 @@ SpriteRenderer:
   m_Size: {x: 2.88, y: 2.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212819927332080900
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -621,6 +633,7 @@ SpriteRenderer:
   m_Size: {x: 2.88, y: 2.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212829480532478946
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -661,6 +674,7 @@ SpriteRenderer:
   m_Size: {x: 2.88, y: 2.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212952516093076768
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -701,3 +715,4 @@ SpriteRenderer:
   m_Size: {x: 2.88, y: 2.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1

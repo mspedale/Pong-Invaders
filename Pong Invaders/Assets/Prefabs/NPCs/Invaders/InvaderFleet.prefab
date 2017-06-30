@@ -697,6 +697,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1516342981985476, guid: 67f62164a54b1db48967ec7fd78c27c9, type: 2}
+  deathExplosion: {fileID: 1239552256059410, guid: adbd5610bb7d6024aa0dc3545fa264e5,
+    type: 2}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
   energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!114 &114352750881262364
@@ -711,6 +713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1516342981985476, guid: 67f62164a54b1db48967ec7fd78c27c9, type: 2}
+  deathExplosion: {fileID: 0}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
   energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!114 &114400665211755814
@@ -725,6 +728,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1516342981985476, guid: 67f62164a54b1db48967ec7fd78c27c9, type: 2}
+  deathExplosion: {fileID: 1239552256059410, guid: adbd5610bb7d6024aa0dc3545fa264e5,
+    type: 2}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
   energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!114 &114486535691667062
@@ -756,6 +761,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1516342981985476, guid: 67f62164a54b1db48967ec7fd78c27c9, type: 2}
+  deathExplosion: {fileID: 1239552256059410, guid: adbd5610bb7d6024aa0dc3545fa264e5,
+    type: 2}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
   energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!114 &114595408331356472
@@ -770,6 +777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1516342981985476, guid: 67f62164a54b1db48967ec7fd78c27c9, type: 2}
+  deathExplosion: {fileID: 1239552256059410, guid: adbd5610bb7d6024aa0dc3545fa264e5,
+    type: 2}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
   energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!114 &114699777080963366
@@ -784,6 +793,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1516342981985476, guid: 67f62164a54b1db48967ec7fd78c27c9, type: 2}
+  deathExplosion: {fileID: 1239552256059410, guid: adbd5610bb7d6024aa0dc3545fa264e5,
+    type: 2}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
   energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!114 &114766439601363234
@@ -798,6 +809,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1516342981985476, guid: 67f62164a54b1db48967ec7fd78c27c9, type: 2}
+  deathExplosion: {fileID: 1239552256059410, guid: adbd5610bb7d6024aa0dc3545fa264e5,
+    type: 2}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
   energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!114 &114892651301989372
@@ -812,6 +825,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1516342981985476, guid: 67f62164a54b1db48967ec7fd78c27c9, type: 2}
+  deathExplosion: {fileID: 1239552256059410, guid: adbd5610bb7d6024aa0dc3545fa264e5,
+    type: 2}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
   energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!114 &114992201333724536
@@ -826,6 +841,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1516342981985476, guid: 67f62164a54b1db48967ec7fd78c27c9, type: 2}
+  deathExplosion: {fileID: 1239552256059410, guid: adbd5610bb7d6024aa0dc3545fa264e5,
+    type: 2}
   energy: {fileID: 1515784025971528, guid: 92e3a99908b1bec40a60a18c0098da58, type: 2}
   energy2: {fileID: 1907743574855040, guid: 599c9c901b6739c499ead27ecb07d9c9, type: 2}
 --- !u!212 &212453401766687438
@@ -868,6 +885,7 @@ SpriteRenderer:
   m_Size: {x: 3.57, y: 3.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212520010145020900
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -908,6 +926,7 @@ SpriteRenderer:
   m_Size: {x: 3.57, y: 3.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212538612076037354
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -948,6 +967,7 @@ SpriteRenderer:
   m_Size: {x: 3.57, y: 3.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212561474636588156
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -988,6 +1008,7 @@ SpriteRenderer:
   m_Size: {x: 3.57, y: 3.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212630316339779222
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1028,6 +1049,7 @@ SpriteRenderer:
   m_Size: {x: 3.57, y: 3.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212918289723091712
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1068,6 +1090,7 @@ SpriteRenderer:
   m_Size: {x: 3.57, y: 3.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212949262959702972
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1108,6 +1131,7 @@ SpriteRenderer:
   m_Size: {x: 3.57, y: 3.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
 --- !u!212 &212954765046277800
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1148,3 +1172,4 @@ SpriteRenderer:
   m_Size: {x: 3.57, y: 3.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
