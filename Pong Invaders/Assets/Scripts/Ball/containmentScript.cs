@@ -83,19 +83,19 @@ public class containmentScript : MonoBehaviour
     {	
 		// HP modification
 		hp -= 1;
-		print(hp); //testing
+		// print(hp); //testing
 		
 		// Frequency modification
 		freq += 0.001f;
 		if (x-prevX >= 0) 
 		{
-			print("going right");
+			// print("going right");
 			t = (Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq);	// offsets t so x won't make a crazy jump when frequency changes
 			direction = 1;
 		}
 		else 
 		{
-			print("going left");
+			// print("going left");
 			t = ((Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq));
 			direction = -1;
 		}
@@ -107,7 +107,7 @@ public class containmentScript : MonoBehaviour
         if (hp < 1)
         {
             // Player One (bottom) gets last shot
-            if (other.gameObject.name == "playerProjectile(Clone)")
+            if (other.gameObject.tag == "Projectile_p1") //other.gameObject.name == "playerProjectile(Clone)")
             {
                 //GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
                 //ballBody = ball.GetComponent<Rigidbody2D>();
@@ -120,7 +120,7 @@ public class containmentScript : MonoBehaviour
 			}
 			
 			// Player Two (top) gets last shot
-			else if (other.gameObject.name == "playerProjectile2(Clone)")
+			else if (other.gameObject.tag == "Projectile_p2") // other.gameObject.name == "playerProjectile2(Clone)")
             {
                 //GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
                 //ballBody = ball.GetComponent<Rigidbody2D>();
