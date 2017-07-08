@@ -28,7 +28,7 @@ public class containmentScript : MonoBehaviour
 	float prevX = 0f;	                            // Previous x position
 	Vector3 newPosition = new Vector3 (0f,0f,0f);	// Need a Vector3 for use with MovePosition()
 	int direction = 1;	                            // Indicates whether the containment is going right or left. Crucial for maintaining direction when frequency changes.
-	// Make this ^^^^ -1 or 1 randomly!
+	// Make this ^^^^ -1 or 1 depending on whether the initial shot collided on the left or right of the containment.
 
 	
     //audio
@@ -63,15 +63,15 @@ public class containmentScript : MonoBehaviour
 		}
 			
 
-		//Movement oscillation based on HP
+		//Movement oscillation speed based on HP
 		if(hp < maxHP) 
 		{
-			// handles pausing the container properly
+			// If NOT paused, move normally
 			if (paused == false) 
 			{
 				t += 1 * direction;
 				prevX = x;
-				x = amp * Mathf.Sin (2 * Mathf.PI * freq * t);
+				x = amp * Mathf.Sin (2 * Mathf.PI * freq * t);	// oscillation formula, in terms of x.
 				newPosition.x = x;
 				containment.MovePosition (newPosition);
 			}
@@ -87,16 +87,25 @@ public class containmentScript : MonoBehaviour
 		
 		// Frequency modification
 		freq += 0.001f;
-		if (x-prevX >= 0) 
+		
+		/*
+		// If not moving
+		if (x-prevX == 0) 
+		{
+			// direction is set depending on whether the initial shot collided on the left or right of the containment
+		}
+		// If moving right
+		else */ if (x-prevX > 0) 
 		{
 			// print("going right");
-			t = (Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq);	// offsets t so x won't make a crazy jump when frequency changes
+			t = (Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq);	// Oscillation formula, in terms of t. This offsets t using the new x value, so x won't make a crazy jump when frequency changes
 			direction = 1;
 		}
+		// If moving left
 		else 
 		{
 			// print("going left");
-			t = ((Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq));
+			t = ((Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq));  // Oscillation formula, in terms of t.
 			direction = -1;
 		}
 		
