@@ -17,15 +17,18 @@ Game Mechanic Additions (High Priority)
 	   	- If allowed to advance to maximum, they kimikaze attack the player or mothership.
 		- When a new wave spawns, move down far enough so the two waves don't collide.
 
-2. Containment startup
-	- The direction in starts moving in depends on whether it was hit on the right or the left.
+2. Ball needs states for detecting which player hit/shot it last
+	a. This is needed for collisions with Invaders.
+		- The energy from an invader/s death will go to whoever hit/shot the ball last.
+	b. Perhaps change the trail color to indicate who hit it last
+	
 		
-2. Kooima Notes from Presentation:
+3. Kooima Notes from Presentation:
 	- Indication for when fighter ship is disabled (visual and audio)
 	- Invaders just fly towards the mothership forever (either have them move forward and back, or die when they collide)
 	- Make the energy more distinct from projectiles (maybe fly towards a meter on the sides instead of motherships)
 
-3. Player Projectiles affecting the ball - Functioning, needs revision (Cam)
+4. Player Projectiles affecting the ball - Functioning, needs revision (Cam)
 	- Instead of an outward force coming from the projectile center point, compare 
 	  ball and projectile x-values and distribute x/y forces imparted directly on the ball.
 	  (diagram in notebook)
@@ -143,18 +146,6 @@ Completed Tasks
 	- When HP is 0, paddle will temporarily destroy or deactivate.
 	
 10. Sound Design - Completed for final presentation (Matt)
-
-11. Space Invader enemies - In Progress (Cam)
-	a. Spawn with containment -- Done
-	b. Ball interaction --- Done
-		- The ball reflects off the space invaders, destroying them. The interaction is similar to wall interactions. X or Y velocity is simply made negative.
-	c. Destroy upon contact with player projectile -- Done
-	d. Shoot their own projectiles
-		- They will shoot their own projectiles, unique from player projectiles.  -- Done
-		- These projectiles damage players and their motherships (if the shield is down), but do not affect the ball. -- Done
-	e. Movement
-		- Similar to the original "Space Invaders," they will move horizontally from one side of the screen to the other, 
-		  advancing vertically each time they reach a horizontal edge.
-		- As they advance toward a player, they shoot more often.
-	   	- If allowed to advance to maximum, they kimikaze attack the player or mothership.
 	
+11. Containment startup - Complete (Cam)
+	- The direction in starts moving in depends on whether it was hit on the right or the left.

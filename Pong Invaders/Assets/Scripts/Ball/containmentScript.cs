@@ -88,14 +88,14 @@ public class containmentScript : MonoBehaviour
 		// Frequency modification
 		freq += 0.001f;
 		
-		/*
 		// If not moving
 		if (x-prevX == 0) 
 		{
 			// direction is set depending on whether the initial shot collided on the left or right of the containment
+			direction = (int)Mathf.Sign(gameObject.transform.position.x - other.transform.position.x);
 		}
 		// If moving right
-		else */ if (x-prevX > 0) 
+		else if (x-prevX > 0) 
 		{
 			// print("going right");
 			t = (Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq);	// Oscillation formula, in terms of t. This offsets t using the new x value, so x won't make a crazy jump when frequency changes
