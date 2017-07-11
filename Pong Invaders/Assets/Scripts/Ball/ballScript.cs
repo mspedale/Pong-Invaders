@@ -17,8 +17,10 @@ public class ballScript : MonoBehaviour
 
 	public float reflectionAngle;
 	public float deadZone;
+	private int possession = 0;			// This keeps track of which player shot/vollied last. 1 = P1, -1 = P2, 0 = neither
 	private float activeZoneLeft, activeZoneRight;
 	private float currentVelocity;
+	
 
     public AudioSource colSound;
     //public AudioSource relSound;
@@ -37,6 +39,10 @@ public class ballScript : MonoBehaviour
 		playerControl = GetComponent<playerControl>();
 		playerControl2 = GetComponent<playerControl2>();
         //relSound.Play();
+		
+		// Declares initial possession
+		possession = (int)Mathf.Sign(ballRigidBody.velocity.y);
+		print("ball: possession = " + possession);
 	}
 	
 	void Start ()
@@ -52,7 +58,6 @@ public class ballScript : MonoBehaviour
         //colSound.clip = shotsound[Random.Range(o, shotsound.Length];
         //colSound.Play();
 	}
-	
 	
 	void Update ()
     {
@@ -94,12 +99,14 @@ public class ballScript : MonoBehaviour
 		// Collision with Projectiles
 		if (coll.gameObject.tag == "Projectile_p1") 
 		{
+			possession = 1;
 			Vector2 projForce = new Vector2(0,currentVelocity + 0.15f);
 			//ballRigidBody.velocity = projForce;
 			ballRigidBody.velocity += (new Vector2(transform.position.x-coll.transform.position.x,transform.position.y-coll.transform.position.y)*10f);
 		}
 		else if (coll.gameObject.tag == "Projectile_p2") 
 		{
+			possession = -1;
 			ballRigidBody.velocity += (new Vector2(transform.position.x-coll.transform.position.x,transform.position.y-coll.transform.position.y)*10f);
 		}		
 	}
@@ -163,11 +170,15 @@ public class ballScript : MonoBehaviour
 			{
 				newY = -Mathf.Sin (newDirectionRadians) * Mathf.Abs (currentVelocity + 0.05f);
                 newX = -Mathf.Cos(newDirectionRadians)*Mathf.Abs(currentVelocity);
+				possession = 1;
+				print("ball: possession = " + possession);
 			} 
 			else if (coll.gameObject.name == "obj_player2") 
 			{
 				newY = Mathf.Sin (newDirectionRadians) * Mathf.Abs (currentVelocity + 0.05f);
                 newX = -Mathf.Cos(newDirectionRadians)*Mathf.Abs(currentVelocity);
+				possession = -1;
+				print("ball: possession = " + possession);
 			}
 
 			if (!inDeadzone) 
@@ -176,4 +187,11 @@ public class ballScript : MonoBehaviour
 			}
 		}
 	}
+
+
+	public int GetPossession() {
+		return possession;
+	}
+	
+	
 }

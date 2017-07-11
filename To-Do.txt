@@ -1,5 +1,12 @@
+------
+ Bugs
+------
+
+1. Containment is affected by energy. It shouldn't be!
+
+
 ------------------------------------
-Game Mechanic Additions (High Priority)
+Game Mechanic Additions (Current)
 ------------------------------------
 
 1. Space Invader enemies - In Progress (Cam)
@@ -17,11 +24,10 @@ Game Mechanic Additions (High Priority)
 	   	- If allowed to advance to maximum, they kimikaze attack the player or mothership.
 		- When a new wave spawns, move down far enough so the two waves don't collide.
 
-2. Ball needs states for detecting which player hit/shot it last
-	a. This is needed for collisions with Invaders.
+2. Ball needs states for detecting which player hit/shot it last: name variable "Possession"
+	a. This is needed for collisions with Invaders.  -- Complete (Cam)
 		- The energy from an invader/s death will go to whoever hit/shot the ball last.
-	b. Perhaps change the trail color to indicate who hit it last
-	
+	b. Perhaps change the trail color to indicate who hit it last	
 		
 3. Kooima Notes from Presentation:
 	- Indication for when fighter ship is disabled (visual and audio)
@@ -35,7 +41,7 @@ Game Mechanic Additions (High Priority)
 
 
 -------------------------------------
-Game Mechanic Additions (Low Priority) 
+Game Mechanic Additions (Backburner) 
 -------------------------------------
 
 1. Mothership Abilities
@@ -73,6 +79,7 @@ Game Mechanic Additions (Low Priority)
 
 4. Invader and Drone pre-shoot animation (so players get fair warning)
 
+5. Impact animation for when paddles/motherships/containment are damaged.
 
 ------------
  Idea bin
