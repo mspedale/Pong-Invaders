@@ -13,6 +13,7 @@ public class containmentScript : MonoBehaviour
     bool paused = false;
 	
 	public GameObject prefab_ball;
+	private ballScript ballScr;
     public GameObject InvaderFleet;
     public GameObject InvaderFleet2;
     public GameObject energy;
@@ -28,7 +29,6 @@ public class containmentScript : MonoBehaviour
 	float prevX = 0f;	                            // Previous x position
 	Vector3 newPosition = new Vector3 (0f,0f,0f);	// Need a Vector3 for use with MovePosition()
 	int direction = 1;	                            // Indicates whether the containment is going right or left. Crucial for maintaining direction when frequency changes.
-	// Make this ^^^^ -1 or 1 depending on whether the initial shot collided on the left or right of the containment.
 
 	
     //audio
@@ -81,64 +81,65 @@ public class containmentScript : MonoBehaviour
 	// Collision event (hopefully just with player projectiles)
 	void OnTriggerEnter2D(Collider2D other)
     {	
-		// HP modification
-		hp -= 1;
-		// print(hp); //testing
 		
-		// Frequency modification
-		freq += 0.001f;
+		string collTag = other.gameObject.tag;
 		
-		// If not moving
-		if (x-prevX == 0) 
+		// If containment is hit by player projectile
+		if (collTag == "Projectile_p1" || collTag == "Projectile_p2") //other.gameObject.name == "playerProjectile(Clone)")
 		{
-			// direction is set depending on whether the initial shot collided on the left or right of the containment
-			direction = (int)Mathf.Sign(gameObject.transform.position.x - other.transform.position.x);
-		}
-		// If moving right
-		else if (x-prevX > 0) 
-		{
-			// print("going right");
-			t = (Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq);	// Oscillation formula, in terms of t. This offsets t using the new x value, so x won't make a crazy jump when frequency changes
-			direction = 1;
-		}
-		// If moving left
-		else 
-		{
-			// print("going left");
-			t = ((Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq));  // Oscillation formula, in terms of t.
-			direction = -1;
-		}
-		
-        //audio, plays if containment is hit by projectile
-        gameObject.GetComponent<AudioSource>().Play();
-
-        // HP down to 0
-        if (hp < 1)
-        {
-            // Player One (bottom) gets last shot
-            if (other.gameObject.tag == "Projectile_p1") //other.gameObject.name == "playerProjectile(Clone)")
-            {
-                //GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
-                //ballBody = ball.GetComponent<Rigidbody2D>();
-
-                prefab_ball.SetActive(true);
-				prefab_ball.transform.SetParent(null);
-                prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-150.0f, 150.0f), ballForce));
-                Instantiate(energy, newPosition, Quaternion.identity);
-				Destroy (gameObject);
+			// HP modification
+			hp -= 1;
+			
+			// Frequency modification
+			freq += 0.001f;
+			
+			// If not moving
+			if (x-prevX == 0) 
+			{
+				// direction is set depending on whether the initial shot collided on the left or right of the containment
+				direction = (int)Mathf.Sign(gameObject.transform.position.x - other.transform.position.x);
+			}
+			// If moving right
+			else if (x-prevX > 0) 
+			{
+				t = (Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq);	// Oscillation formula, in terms of t. This offsets t using the new x value, so x won't make a crazy jump when frequency changes
+				direction = 1;
+			}
+			// If moving left
+			else 
+			{
+				t = ((Mathf.Asin(x/amp) + (2* Mathf.PI)) / (2*Mathf.PI*freq));  // Oscillation formula, in terms of t.
+				direction = -1;
 			}
 			
-			// Player Two (top) gets last shot
-			else if (other.gameObject.tag == "Projectile_p2") // other.gameObject.name == "playerProjectile2(Clone)")
-            {
-                //GameObject ball = Instantiate(prefab_ball, transform.position,Quaternion.identity) as GameObject;
-                //ballBody = ball.GetComponent<Rigidbody2D>();
-                //ballBody.AddForce(new Vector2(Random.Range(-300.0f, 300.0f),ballForce));
-
-                prefab_ball.SetActive(true);
+			//audio, plays if containment is hit by projectile
+			gameObject.GetComponent<AudioSource>().Play();
+			
+			// If HP has reached 0
+			if (hp < 1)
+			{
+				// Activate ball, dissolve child/parent relationship :'(
+				prefab_ball.SetActive(true);
 				prefab_ball.transform.SetParent(null);
-				prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-150.0f, 150.0f),-ballForce));
-                Instantiate(energy2, newPosition, Quaternion.identity);
+				
+				// Set ballScript so we can set possession.
+				ballScr = prefab_ball.GetComponent<ballScript>();
+				
+				// If player One (bottom) gets last shot
+				if (collTag == "Projectile_p1")
+				{
+					// Throw ball upwards, set possession, and spawn energy for p1
+					prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-150.0f, 150.0f), ballForce));
+					ballScr.SetPossession(1);
+					Instantiate(energy, newPosition, Quaternion.identity);
+				}
+				else // Player Two (top) gets last shot
+				{
+					// Throw ball down, set possession, spawn energy for p2
+					prefab_ball.GetComponent<Rigidbody2D>().AddForce(new Vector2(Random.Range(-150.0f, 150.0f),-ballForce));
+					ballScr.SetPossession(-1);
+					Instantiate(energy2, newPosition, Quaternion.identity);
+				}
 				Destroy (gameObject);		
 			}
 		}

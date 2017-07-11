@@ -40,9 +40,11 @@ public class ballScript : MonoBehaviour
 		playerControl2 = GetComponent<playerControl2>();
         //relSound.Play();
 		
+		/*
 		// Declares initial possession
 		possession = (int)Mathf.Sign(ballRigidBody.velocity.y);
 		print("ball: possession = " + possession);
+		*/
 	}
 	
 	void Start ()
@@ -61,9 +63,6 @@ public class ballScript : MonoBehaviour
 	
 	void Update ()
     {
-		// Movement update
-		// velocity =(velX,velY,0);
-	    //transform.position = new Vector3(0,velY,0);
 		
 		// update local scalar value for velocity
 	    currentVelocity = Mathf.Sqrt(Mathf.Pow(ballRigidBody.velocity.x,2)+Mathf.Pow(ballRigidBody.velocity.y,2));
@@ -188,7 +187,17 @@ public class ballScript : MonoBehaviour
 		}
 	}
 
-
+	public void SetPossession(int newPoss) 
+	{
+		// Little series of If statements prevents confusion between "2" and "-1", as well as keeping possession within operable range
+		if (newPoss == 1)
+			possession = 1;
+		else if (newPoss == 0)
+			possession = 0;
+		else
+			possession = -1;
+	}
+	
 	public int GetPossession() {
 		return possession;
 	}
