@@ -10,7 +10,7 @@ function Start ()
 	
 }
 
-function Update () 
+function FixedUpdate () 
 {
 	// Position = position + speed
 	gameObject.transform.position.y += speed * direction;

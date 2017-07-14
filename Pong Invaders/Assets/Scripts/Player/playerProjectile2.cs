@@ -7,7 +7,7 @@ using UnityEngine;
 public class playerProjectile2 : MonoBehaviour 
 {
 	
-	public float speed = 0.5f;
+	public float speed = 1f;
 	int direction = -1;
 	Vector3 velocity = new Vector3(0,0,0);
 	
@@ -18,7 +18,7 @@ public class playerProjectile2 : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () 
+	void FixedUpdate () 
 	{
 		// Position = position + speed
 		velocity.y = speed * direction;
@@ -30,7 +30,7 @@ public class playerProjectile2 : MonoBehaviour
 	{
         if(coll.gameObject.tag!= "Player2" && coll.gameObject.tag!="redDrone" && coll.gameObject.tag != "energy")
 		{
-		Destroy (gameObject);
+			Destroy (gameObject);
         }
 	}
 

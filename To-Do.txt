@@ -2,7 +2,7 @@
  Bugs
 ------
 
-1. Containment is affected by energy. It shouldn't be!
+1. Containment is affected by energy. It shouldn't be!  -- Fixed (Cam)
 
 
 ------------------------------------
@@ -34,11 +34,8 @@ Game Mechanic Additions (Current)
 	- Invaders just fly towards the mothership forever (either have them move forward and back, or die when they collide)
 	- Make the energy more distinct from projectiles (maybe fly towards a meter on the sides instead of motherships)
 
-4. Player Projectiles affecting the ball - Functioning, needs revision (Cam)
-	- Instead of an outward force coming from the projectile center point, compare 
-	  ball and projectile x-values and distribute x/y forces imparted directly on the ball.
-	  (diagram in notebook)
-
+4. Change Paddle/Ball interaction (also make Player collision boxes into triggers?)
+	- Make it more like the new projectile/ball interaction, in which angle is determined by x positions
 
 -------------------------------------
 Game Mechanic Additions (Backburner) 
@@ -115,8 +112,10 @@ Completed Tasks
 	- Stay destroyed or deactivated for a certain (reasonably long) amount of time.
 	- Respawn the containment upon reactivation
 
-4. Player Projectiles affecting the ball - Functioning, needs revision (Cam)   >> See "Game Mechanic Additions" (Low Priority)
-	
+4. Player Projectiles affecting the ball -- Complete (Pat) -- Revised (Cam)
+	- Instead of an outward force coming from the projectile center point, compare 
+	  ball and projectile x-values and distribute x/y forces imparted directly on the ball.
+	  (diagram in notebook)  -- Complete (Cam)
 	  
 5. Main Menu Screen - Completed (Matt)
 	- Same BG as main game for simple transition to matches
