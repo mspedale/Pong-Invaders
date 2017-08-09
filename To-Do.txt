@@ -37,6 +37,14 @@ Game Mechanic Additions (Current)
 4. Change Paddle/Ball interaction (also make Player collision boxes into triggers?)
 	- Make it more like the new projectile/ball interaction, in which angle is determined by x positions
 
+5. Overhaul Drone spawning, add drone movement
+	- Dronefleet has child objects called droneSlots, made to guide drones to the correct position upon spawning
+	- droneSlots are set to ACTIVE when a Drone occupies their position.  Set INACTIVE when drone is destroyed (set parent inactive in drone death method)
+	- DroneFleet counts its droneSlots upon startup, and puts them into an array of objects.
+	- Upon spawning a drone, the droneFleet sets a droneSlot as the drone's parent.
+		- (Alternatively, the droneFleet can set the formPoint of the drone with the drone's SetFormPoint method.)
+
+
 -------------------------------------
 Game Mechanic Additions (Backburner) 
 -------------------------------------
